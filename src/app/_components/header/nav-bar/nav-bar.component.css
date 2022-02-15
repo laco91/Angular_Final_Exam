@@ -1,0 +1,25 @@
+.logo {
+  height: 100px;
+  vertical-align: middle;
+}
+.navbar-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.navbar-link {
+  padding: 10px;
+  font-size: 2em;
+  font-weight: bold;
+  font-family: Hirokawa;
+  text-decoration: none;
+  cursor: pointer;
+  color: #ffffff;
+}
+.navbar-link:hover {
+  color: #ffdf00;
+}
+.navbar-container .navbar-link span {
+  color: #ff0000;
+}

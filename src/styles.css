@@ -1,1 +1,66 @@
-/* You can add global styles to this file, and also import other style files */
+/* Bootstrap 5 */
+@import "~bootstrap/dist/css/bootstrap.css";
+
+/* Fonts */
+@font-face {
+  font-family: Hirokawa;
+  src: url(assets/fonts/Hirokawa.ttf) format('truetype');
+}
+
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Header */
+app-nav-bar {
+  position: fixed;
+  width: 100%;
+  height: 65px;
+  margin-top: 20px;
+  display: flex;
+  background: transparent;
+  z-index: 1;
+}
+
+/* Main */
+app-carousel {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  background: #000000;
+  color: white;
+}
+app-menu {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  background: #101010;
+  color: white;
+}
+app-gallery {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  background: #202020;
+  color: white;
+}
+app-booking {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  background: #303030;
+  color: white;
+}
+app-contact {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  background: #404040;
+  color: white;
+}
+
+
+/* Footer */
