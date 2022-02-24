@@ -1,0 +1,1 @@
+export { MenuService } from '../_services/menu.service';

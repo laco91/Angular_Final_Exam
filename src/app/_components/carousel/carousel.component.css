@@ -1,0 +1,29 @@
+.carousel-item {
+  position: relative;
+  height: 100vh;
+  background: #777;
+  color: white;
+}
+
+.carousel-img-one {
+  background: url('^assets/imgs/carousel_img_1.jpg');
+}
+.carousel-img-two {
+  background: url('^assets/imgs/carousel_img_2.jpg');
+}
+.carousel-img-three {
+  background: url('^assets/imgs/carousel_img_3.jpg');
+}
+.carousel-img-one, .carousel-img-two, .carousel-img-three {
+  position: absolute;
+  inset: 0;
+  background-position: center;
+  background-size: cover;
+}
+
+.container {
+  position: absolute;
+  inset: auto 0 0 0;
+  text-align: center;
+  padding-bottom: 50px;
+}

@@ -1,0 +1,50 @@
+<div class="menu-wrapper">
+  <!-- Drinks -->
+  <section>
+    <div class="menu-list">
+      <div class="menu-item" *ngFor="let drink of drinks">
+        <span>{{ drink.name }}</span>{{ drink.price | currency }}
+      </div>
+      <div class="menu-title">
+        <h2>Drinks</h2>
+      </div>
+      <img class="menu-img-drink" src="assets/imgs/drink.png" alt="drink">
+    </div>
+  </section>
+  <!-- Main Dishes -->
+  <section>
+    <div class="menu-list">
+      <div class="menu-item" *ngFor="let mainDish of drinks">
+        <span>{{ mainDish.name }}</span>{{ mainDish.price | currency }}
+      </div>
+      <div class="menu-title">
+        <h2>Main Dishes</h2>
+      </div>
+      <img class="menu-img-maindish" src="assets/imgs/maindish.png" alt="maindish">
+    </div>
+  </section>
+  <!-- Sushi -->
+  <section>
+    <div class="menu-list">
+      <div class="menu-item" *ngFor="let sushi of drinks">
+        <span>{{ sushi.name }}</span>{{ sushi.price | currency }}
+      </div>
+      <div class="menu-title">
+        <h2>Sushi</h2>
+      </div>
+      <img class="menu-img-sushi" src="assets/imgs/sushi.png" alt="sushi">
+    </div>
+  </section>
+  <!-- Desserts -->
+  <section>
+    <div class="menu-list">
+      <div class="menu-item" *ngFor="let dessert of drinks">
+        <span>{{ dessert.name }}</span>{{ dessert.price | currency }}
+      </div>
+      <div class="menu-title">
+        <h2>Desserts</h2>
+      </div>
+      <img class="menu-img-dessert" src="assets/imgs/dessert.png" alt="dessert">
+    </div>
+  </section>
+</div>

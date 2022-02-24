@@ -15,11 +15,12 @@
   font-family: Hirokawa;
   text-decoration: none;
   cursor: pointer;
-  color: #ffffff;
+  color: var(--smoke);
+  filter: var(--shadow);
 }
 .navbar-link:hover {
-  color: #ffdf00;
+  color: var(--golden);
 }
 .navbar-container .navbar-link span {
-  color: #ff0000;
+  color: var(--red);
 }

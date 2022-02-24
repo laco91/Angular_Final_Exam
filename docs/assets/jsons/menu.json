@@ -1,0 +1,410 @@
+{
+  "drinks": [
+    {
+      "id": 1,
+      "name": "Drink name 1",
+      "price": 10
+    },
+    {
+      "id": 2,
+      "name": "Drink name 2",
+      "price": 10
+    },
+    {
+      "id": 3,
+      "name": "Drink name 3",
+      "price": 10
+    },
+    {
+      "id": 4,
+      "name": "Drink name 4",
+      "price": 10
+    },
+    {
+      "id": 5,
+      "name": "Drink name 5",
+      "price": 10
+    },
+    {
+      "id": 6,
+      "name": "Drink name 6",
+      "price": 10
+    },
+    {
+      "id": 7,
+      "name": "Drink name 7",
+      "price": 10
+    },
+    {
+      "id": 8,
+      "name": "Drink name 8",
+      "price": 10
+    },
+    {
+      "id": 9,
+      "name": "Drink name 9",
+      "price": 10
+    },
+    {
+      "id": 10,
+      "name": "Drink name 10",
+      "price": 10
+    },
+    {
+      "id": 11,
+      "name": "Drink name 11",
+      "price": 10
+    },
+    {
+      "id": 12,
+      "name": "Drink name 12",
+      "price": 10
+    },
+    {
+      "id": 13,
+      "name": "Drink name 13",
+      "price": 10
+    },
+    {
+      "id": 14,
+      "name": "Drink name 14",
+      "price": 10
+    },
+    {
+      "id": 15,
+      "name": "Drink name 15",
+      "price": 10
+    },
+    {
+      "id": 16,
+      "name": "Drink name 16",
+      "price": 10
+    },
+    {
+      "id": 17,
+      "name": "Drink name 17",
+      "price": 10
+    },
+    {
+      "id": 18,
+      "name": "Drink name 18",
+      "price": 10
+    },
+    {
+      "id": 19,
+      "name": "Drink name 19",
+      "price": 10
+    },
+    {
+      "id": 20,
+      "name": "Drink name 20",
+      "price": 10
+    }
+  ],
+  "mainDishes": [
+    {
+      "id": 1,
+      "name": "Main dish name 1",
+      "price": 10
+    },
+    {
+      "id": 2,
+      "name": "Main dish name 2",
+      "price": 10
+    },
+    {
+      "id": 3,
+      "name": "Main dish name 3",
+      "price": 10
+    },
+    {
+      "id": 4,
+      "name": "Main dish name 4",
+      "price": 10
+    },
+    {
+      "id": 5,
+      "name": "Main dish name 5",
+      "price": 10
+    },
+    {
+      "id": 6,
+      "name": "Main dish name 6",
+      "price": 10
+    },
+    {
+      "id": 7,
+      "name": "Main dish name 7",
+      "price": 10
+    },
+    {
+      "id": 8,
+      "name": "Main dish name 8",
+      "price": 10
+    },
+    {
+      "id": 9,
+      "name": "Main dish name 9",
+      "price": 10
+    },
+    {
+      "id": 10,
+      "name": "Main dish name 10",
+      "price": 10
+    },
+    {
+      "id": 11,
+      "name": "Main dish name 11",
+      "price": 10
+    },
+    {
+      "id": 12,
+      "name": "Main dish name 12",
+      "price": 10
+    },
+    {
+      "id": 13,
+      "name": "Main dish name 13",
+      "price": 10
+    },
+    {
+      "id": 14,
+      "name": "Main dish name 14",
+      "price": 10
+    },
+    {
+      "id": 15,
+      "name": "Main dish name 15",
+      "price": 10
+    },
+    {
+      "id": 16,
+      "name": "Main dish name 16",
+      "price": 10
+    },
+    {
+      "id": 17,
+      "name": "Main dish name 17",
+      "price": 10
+    },
+    {
+      "id": 18,
+      "name": "Main dish name 18",
+      "price": 10
+    },
+    {
+      "id": 19,
+      "name": "Main dish name 19",
+      "price": 10
+    },
+    {
+      "id": 20,
+      "name": "Main dish name 20",
+      "price": 10
+    }
+  ],
+  "sushi": [
+    {
+      "id": 1,
+      "name": "Sushi name 1",
+      "price": 10
+    },
+    {
+      "id": 2,
+      "name": "Sushi name 2",
+      "price": 10
+    },
+    {
+      "id": 3,
+      "name": "Sushi name 3",
+      "price": 10
+    },
+    {
+      "id": 4,
+      "name": "Sushi name 4",
+      "price": 10
+    },
+    {
+      "id": 5,
+      "name": "Sushi name 5",
+      "price": 10
+    },
+    {
+      "id": 6,
+      "name": "Sushi name 6",
+      "price": 10
+    },
+    {
+      "id": 7,
+      "name": "Sushi name 7",
+      "price": 10
+    },
+    {
+      "id": 8,
+      "name": "Sushi name 8",
+      "price": 10
+    },
+    {
+      "id": 9,
+      "name": "Sushi name 9",
+      "price": 10
+    },
+    {
+      "id": 10,
+      "name": "Sushi name 10",
+      "price": 10
+    },
+    {
+      "id": 11,
+      "name": "Sushi name 11",
+      "price": 10
+    },
+    {
+      "id": 12,
+      "name": "Sushi name 12",
+      "price": 10
+    },
+    {
+      "id": 13,
+      "name": "Sushi name 13",
+      "price": 10
+    },
+    {
+      "id": 14,
+      "name": "Sushi name 14",
+      "price": 10
+    },
+    {
+      "id": 15,
+      "name": "Sushi name 15",
+      "price": 10
+    },
+    {
+      "id": 16,
+      "name": "Sushi name 16",
+      "price": 10
+    },
+    {
+      "id": 17,
+      "name": "Sushi name 17",
+      "price": 10
+    },
+    {
+      "id": 18,
+      "name": "Sushi name 18",
+      "price": 10
+    },
+    {
+      "id": 19,
+      "name": "Sushi name 19",
+      "price": 10
+    },
+    {
+      "id": 20,
+      "name": "Sushi name 20",
+      "price": 10
+    }
+  ],
+  "desserts": [
+    {
+      "id": 1,
+      "name": "Dessert name 1",
+      "price": 10
+    },
+    {
+      "id": 2,
+      "name": "Dessert name 2",
+      "price": 10
+    },
+    {
+      "id": 3,
+      "name": "Dessert name 3",
+      "price": 10
+    },
+    {
+      "id": 4,
+      "name": "Dessert name 4",
+      "price": 10
+    },
+    {
+      "id": 5,
+      "name": "Dessert name 5",
+      "price": 10
+    },
+    {
+      "id": 6,
+      "name": "Dessert name 6",
+      "price": 10
+    },
+    {
+      "id": 7,
+      "name": "Dessert name 7",
+      "price": 10
+    },
+    {
+      "id": 8,
+      "name": "Dessert name 8",
+      "price": 10
+    },
+    {
+      "id": 9,
+      "name": "Dessert name 9",
+      "price": 10
+    },
+    {
+      "id": 10,
+      "name": "Dessert name 10",
+      "price": 10
+    },
+    {
+      "id": 11,
+      "name": "Dessert name 11",
+      "price": 10
+    },
+    {
+      "id": 12,
+      "name": "Dessert name 12",
+      "price": 10
+    },
+    {
+      "id": 13,
+      "name": "Dessert name 13",
+      "price": 10
+    },
+    {
+      "id": 14,
+      "name": "Dessert name 14",
+      "price": 10
+    },
+    {
+      "id": 15,
+      "name": "Dessert name 15",
+      "price": 10
+    },
+    {
+      "id": 16,
+      "name": "Dessert name 16",
+      "price": 10
+    },
+    {
+      "id": 17,
+      "name": "Dessert name 17",
+      "price": 10
+    },
+    {
+      "id": 18,
+      "name": "Dessert name 18",
+      "price": 10
+    },
+    {
+      "id": 19,
+      "name": "Dessert name 19",
+      "price": 10
+    },
+    {
+      "id": 20,
+      "name": "Dessert name 20",
+      "price": 10
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { BookingComponent, CarouselComponent, ContactComponent,
+import { AdminComponent, BookingComponent, CarouselComponent, ContactComponent,
          GalleryComponent, MenuComponent } from './_components/component_collector';
 
 const routes: Routes = [
@@ -10,6 +10,7 @@ const routes: Routes = [
   { path: 'gallery', component: GalleryComponent },
   { path: 'booking', component: BookingComponent },
   { path: 'contact', component: ContactComponent },
+  { path: 'admin', component: AdminComponent }
 ];
 
 @NgModule({

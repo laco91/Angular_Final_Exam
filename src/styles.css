@@ -1,6 +1,3 @@
-/* Bootstrap 5 */
-@import "~bootstrap/dist/css/bootstrap.css";
-
 /* Fonts */
 @font-face {
   font-family: Hirokawa;
@@ -14,32 +11,43 @@
   box-sizing: border-box;
 }
 
-/* Header */
+:root {
+  /* Colors */
+  --black: #000000;
+  --red: #ff0000;
+  --golden: #ffdf00;
+  --smoke: #f5f5f5;
+
+  /* Styles */
+  --shadow: drop-shadow(0 0 0.1rem var(--black));
+}
+
+/* Hide scrollbar */
+*::-webkit-scrollbar {  /* Chrome, Safari and Opera */
+  display: none;
+  background: transparent;
+}
+* {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+/* Content */
 app-nav-bar {
   position: fixed;
-  width: 100%;
-  height: 65px;
+  width: 100vw;
+  height: 11vh;
   margin-top: 20px;
   display: flex;
   background: transparent;
-  z-index: 1;
+  z-index: 10;
 }
 
-/* Main */
-app-carousel {
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  background: #000000;
-  color: white;
-}
 app-menu {
   width: 100%;
   height: 100vh;
-  display: flex;
-  background: #101010;
-  color: white;
 }
+
 app-gallery {
   width: 100%;
   height: 100vh;
@@ -47,6 +55,7 @@ app-gallery {
   background: #202020;
   color: white;
 }
+
 app-booking {
   width: 100%;
   height: 100vh;
@@ -54,6 +63,7 @@ app-booking {
   background: #303030;
   color: white;
 }
+
 app-contact {
   width: 100%;
   height: 100vh;
@@ -61,6 +71,3 @@ app-contact {
   background: #404040;
   color: white;
 }
-
-
-/* Footer */

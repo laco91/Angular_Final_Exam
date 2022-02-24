@@ -1,1 +1,1 @@
-export { CarouselImages } from '../_models/carousel';
+export { Menu } from '../_models/menu';
