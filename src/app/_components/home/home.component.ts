@@ -2,11 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import { NavbarService } from 'src/app/_services/navbar.service';
 
 @Component({
-  selector: 'app-contact',
-  templateUrl: './contact.component.html',
-  styleUrls: ['./contact.component.css']
+  selector: 'app-carousel',
+  templateUrl: './home.component.html',
+  styleUrls: ['./home.component.css']
 })
-export class ContactComponent implements OnInit {
+
+export class HomeComponent implements OnInit {
 
   constructor(public nav: NavbarService) { }
 

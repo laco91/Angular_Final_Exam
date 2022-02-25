@@ -33,7 +33,7 @@
 }
 
 /* Content */
-app-nav-bar {
+app-navbar {
   position: fixed;
   width: 100vw;
   height: 11vh;

@@ -1,4 +1,4 @@
-<nav class="navbar-container">
+<nav class="navbar-container" *ngIf="nav.visible">
   <a class="navbar-link" routerLink="/menu">Me<span>n</span>u</a>
   <a class="navbar-link" routerLink="/gallery">Gall<span>e</span>ry</a>
   <a class="navbar-link" routerLink="/home">
@@ -8,6 +8,10 @@
   <a class="navbar-link" routerLink="/contact">C<span>o</span>ntact</a>
 </nav>
 
+<!-- Temporary button for CRUD, it will be replace with login/register -->
 <div style="position: absolute; right: 0; margin-right: 20px;">
-  <button class="btn btn-primary" routerLink="/admin">Admin</button>
+  <button class="btn" (click)="navigateTo()"
+  [ngClass]="isClicked ? 'btn-danger' : 'btn-primary'">
+  {{ isClicked ? 'AdmOut' : 'AdmIn'}}
+  </button>
 </div>

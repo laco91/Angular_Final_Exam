@@ -14,7 +14,7 @@
   <!-- Main Dishes -->
   <section>
     <div class="menu-list">
-      <div class="menu-item" *ngFor="let mainDish of drinks">
+      <div class="menu-item" *ngFor="let mainDish of mainDishes">
         <span>{{ mainDish.name }}</span>{{ mainDish.price | currency }}
       </div>
       <div class="menu-title">
@@ -26,7 +26,7 @@
   <!-- Sushi -->
   <section>
     <div class="menu-list">
-      <div class="menu-item" *ngFor="let sushi of drinks">
+      <div class="menu-item" *ngFor="let sushi of sushi">
         <span>{{ sushi.name }}</span>{{ sushi.price | currency }}
       </div>
       <div class="menu-title">
@@ -38,7 +38,7 @@
   <!-- Desserts -->
   <section>
     <div class="menu-list">
-      <div class="menu-item" *ngFor="let dessert of drinks">
+      <div class="menu-item" *ngFor="let dessert of desserts">
         <span>{{ dessert.name }}</span>{{ dessert.price | currency }}
       </div>
       <div class="menu-title">

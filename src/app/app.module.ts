@@ -7,18 +7,18 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { BookingComponent, ContactComponent,
          GalleryComponent, MenuComponent,
-         NavBarComponent, CarouselComponent,
+         NavbarComponent, HomeComponent,
          AdminComponent } from './_components/component_collector';
          
 @NgModule({
   declarations: [
     AppComponent,
-    NavBarComponent,
+    NavbarComponent,
     MenuComponent,
     GalleryComponent,
     BookingComponent,
     ContactComponent,
-    CarouselComponent,
+    HomeComponent,
     AdminComponent
   ],
   imports: [
