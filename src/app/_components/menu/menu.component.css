@@ -5,18 +5,10 @@ h2 {
   filter: var(--shadow);
 }
 
-section {
-  padding: 70px 0 5px 0;
-  height: 100vh;
-  min-width: 100vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  scroll-snap-align: start;
-}
-
 .menu-wrapper {
   display: flex;
+  height: 100vh;
+  
   scroll-snap-type: x mandatory;
   overflow-x: scroll;
   background: url('^assets/imgs/menubg.jpg');
@@ -24,9 +16,18 @@ section {
   background-position: center;
 }
 
+section {
+  display: flex;
+  padding-top: 15vh;
+  padding-bottom: 10vh;
+  min-width: 100vw;
+  justify-content: center;
+  scroll-snap-align: start;
+}
+
 .menu-list {
   position: relative;
-  height: 70vh;
+  min-height: 70vh;
   width: 75vw;
   padding: 30px;
   background: var(--black);
@@ -77,4 +78,14 @@ section {
 .menu-img-sushi,
 .menu-img-dessert {
   position: absolute;
+}
+
+/* Hide scrollbar */
+*::-webkit-scrollbar {  /* Chrome, Safari and Opera */
+  display: none;
+  background: transparent;
+}
+* {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
 }

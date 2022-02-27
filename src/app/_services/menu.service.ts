@@ -14,11 +14,11 @@ export class MenuService {
 
   constructor(private http: HttpClient) { }
 
-  getAllDrink() {
+  getAllDrinks() {
     return this.http.get<Menu[]>(`${environment.jsonUrl}/drinks`, httpOption);
   }
 
-  getAllMainDish() {
+  getAllMainDishes() {
     return this.http.get<Menu[]>(`${environment.jsonUrl}/mainDishes`, httpOption);
   }
 
@@ -26,7 +26,7 @@ export class MenuService {
     return this.http.get<Menu[]>(`${environment.jsonUrl}/sushi`, httpOption);
   }
 
-  getAllDesert() {
+  getAllDeserts() {
     return this.http.get<Menu[]>(`${environment.jsonUrl}/desserts`, httpOption);
   }
 }

@@ -1,15 +1,23 @@
 <nav class="navbar-container" *ngIf="nav.visible">
-  <a class="navbar-link" routerLink="/menu">Me<span>n</span>u</a>
-  <a class="navbar-link" routerLink="/gallery">Gall<span>e</span>ry</a>
   <a class="navbar-link" routerLink="/home">
-    <img class="logo" src="assets/imgs/maneko.png" alt="logo">
+    <img src="assets/imgs/logo.png" alt="logo">
   </a>
-  <a class="navbar-link" routerLink="/booking">Boo<span>k</span>ing</a>
-  <a class="navbar-link" routerLink="/contact">C<span>o</span>ntact</a>
+  <a class="navbar-link" routerLink="/menu" routerLinkActive="active">
+    Me<span>n</span>u
+  </a>
+  <a class="navbar-link" routerLink="/gallery" routerLinkActive="active">
+    Gall<span>e</span>ry
+  </a>
+  <a class="navbar-link" routerLink="/booking" routerLinkActive="active">
+    Boo<span>k</span>ing
+  </a>
+  <a class="navbar-link" routerLink="/contact" routerLinkActive="active">
+    C<span>o</span>ntact
+  </a>
 </nav>
 
-<!-- Temporary button for CRUD, it will be replace with login/register -->
-<div style="position: absolute; right: 0; margin-right: 20px;">
+<!-- Temporary button, it will be replace with login/register -->
+<div style="position: absolute; right: 0; top: 20px; margin-right: 20px; z-index: 2;">
   <button class="btn" (click)="navigateTo()"
   [ngClass]="isClicked ? 'btn-danger' : 'btn-primary'">
   {{ isClicked ? 'AdmOut' : 'AdmIn'}}

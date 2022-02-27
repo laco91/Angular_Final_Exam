@@ -406,5 +406,127 @@
       "name": "Dessert name 20",
       "price": 10
     }
+  ],
+  "gallery": [
+    {
+      "imgSrc": "gallery_img1.jpg",
+      "imgAlt": "gallery image"
+    },
+    {
+      "imgSrc": "gallery_img2.jpg",
+      "imgAlt": "gallery image"
+    },
+    {
+      "imgSrc": "gallery_img3.jpg",
+      "imgAlt": "gallery image"
+    },
+    {
+      "imgSrc": "gallery_img4.jpg",
+      "imgAlt": "gallery image"
+    },
+    {
+      "imgSrc": "gallery_img5.jpg",
+      "imgAlt": "gallery image"
+    },
+    {
+      "imgSrc": "gallery_img6.jpg",
+      "imgAlt": "gallery image"
+    },
+    {
+      "imgSrc": "gallery_img7.jpg",
+      "imgAlt": "gallery image"
+    },
+    {
+      "imgSrc": "gallery_img8.jpg",
+      "imgAlt": "gallery image"
+    },
+    {
+      "imgSrc": "gallery_img9.jpg",
+      "imgAlt": "gallery image"
+    },
+    {
+      "imgSrc": "gallery_img10.jpg",
+      "imgAlt": "gallery image"
+    },
+    {
+      "imgSrc": "gallery_img11.jpg",
+      "imgAlt": "gallery image"
+    },
+    {
+      "imgSrc": "gallery_img12.jpg",
+      "imgAlt": "gallery image"
+    },
+    {
+      "imgSrc": "gallery_img13.jpg",
+      "imgAlt": "gallery image"
+    },
+    {
+      "imgSrc": "gallery_img14.jpg",
+      "imgAlt": "gallery image"
+    },
+    {
+      "imgSrc": "gallery_img15.jpg",
+      "imgAlt": "gallery image"
+    },
+    {
+      "imgSrc": "gallery_img16.jpg",
+      "imgAlt": "gallery image"
+    },
+    {
+      "imgSrc": "gallery_img17.jpg",
+      "imgAlt": "gallery image"
+    },
+    {
+      "imgSrc": "gallery_img18.jpg",
+      "imgAlt": "gallery image"
+    },
+    {
+      "imgSrc": "gallery_img19.jpg",
+      "imgAlt": "gallery image"
+    },
+    {
+      "imgSrc": "gallery_img20.jpg",
+      "imgAlt": "gallery image"
+    },
+    {
+      "imgSrc": "gallery_img21.jpg",
+      "imgAlt": "gallery image"
+    },
+    {
+      "imgSrc": "gallery_img22.jpg",
+      "imgAlt": "gallery image"
+    },
+    {
+      "imgSrc": "gallery_img23.jpg",
+      "imgAlt": "gallery image"
+    },
+    {
+      "imgSrc": "gallery_img24.jpg",
+      "imgAlt": "gallery image"
+    },
+    {
+      "imgSrc": "gallery_img25.jpg",
+      "imgAlt": "gallery image"
+    },
+    {
+      "imgSrc": "gallery_img26.jpg",
+      "imgAlt": "gallery image"
+    },
+    {
+      "imgSrc": "gallery_img27.jpg",
+      "imgAlt": "gallery image"
+    },
+    {
+      "imgSrc": "gallery_img28.jpg",
+      "imgAlt": "gallery image"
+    },
+    {
+      "imgSrc": "gallery_img29.jpg",
+      "imgAlt": "gallery image"
+    },
+    {
+      "imgSrc": "gallery_img30.jpg",
+      "imgAlt": "gallery image"
+    }
   ]
 }

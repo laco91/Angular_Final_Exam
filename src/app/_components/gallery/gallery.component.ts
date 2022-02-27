@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Gallery } from 'src/app/_models/model_collector';
 import { NavbarService } from 'src/app/_services/navbar.service';
+import { GalleryService } from 'src/app/_services/service_collector';
 
 @Component({
   selector: 'app-gallery',
@@ -8,10 +10,19 @@ import { NavbarService } from 'src/app/_services/navbar.service';
 })
 export class GalleryComponent implements OnInit {
 
-  constructor(public nav: NavbarService) { }
+  images: Gallery[] = [];
+
+  constructor(public nav: NavbarService,
+              private galleryService: GalleryService) { }
 
   ngOnInit(): void {
     this.nav.show();
+    this.getImages();
+  }
+
+  getImages() {
+    this.galleryService.getAllImages()
+      .subscribe(data => this.images = data);
   }
 
 }

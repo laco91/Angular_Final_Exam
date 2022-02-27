@@ -1,0 +1,27 @@
+.sidebar-wrapper {
+  height: 100vh;
+  width: 20vw;
+  background: var(--coal);
+}
+
+.sidebar-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 30px;
+}
+
+.sidebar-item {
+  background: var(--smoke);
+  padding: 10px 20px;
+  margin: 10px;
+  font-size: 1.3rem;
+  border-radius: 30px;
+  width: 200px;
+  text-decoration: none;
+  color: var(--coal);
+}
+
+.sidebar-item i {
+  width: 20px;
+}

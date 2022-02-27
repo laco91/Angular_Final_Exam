@@ -1,1 +1,7 @@
-<p>gallery works!</p>
+<div class="gallery-wrapper">
+  <div class="gallery-container">
+    <img *ngFor="let image of images"
+    src="assets/imgs/gallery/{{ image.imgSrc }}"
+    alt="{{ image.imgAlt }}">
+  </div>
+</div>

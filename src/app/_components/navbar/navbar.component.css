@@ -1,13 +1,13 @@
-.logo {
-  height: 100px;
-  vertical-align: middle;
-}
 .navbar-container {
-  width: 100%;
+  position: fixed;
+  height: 15vh;
+  width: 100vw;
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 2;
 }
+
 .navbar-link {
   padding: 10px;
   font-size: 2em;
@@ -18,9 +18,15 @@
   color: var(--smoke);
   filter: var(--shadow);
 }
+
 .navbar-link:hover {
   color: var(--golden);
 }
+
 .navbar-container .navbar-link span {
   color: var(--red);
+}
+
+.navbar-container .active {
+  color: var(--golden);
 }

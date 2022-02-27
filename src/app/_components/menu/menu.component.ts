@@ -15,24 +15,25 @@ export class MenuComponent implements OnInit {
   sushi: Menu[] = [];
   desserts: Menu[] = [];
 
-  constructor(private menuService: MenuService,
-              public nav: NavbarService) { }
+  constructor(public nav: NavbarService,
+              private menuService: MenuService
+              ) { }
 
   ngOnInit(): void {
     this.nav.show();
-    this.getDrink();
-    this.getMainDish();
+    this.getDrinks();
+    this.getMainDishes();
     this.getSushi();
-    this.getDessert();
+    this.getDesserts();
   }
 
-  getDrink() {
-    this.menuService.getAllDrink()
+  getDrinks() {
+    this.menuService.getAllDrinks()
       .subscribe(data => this.drinks = data);
   }
 
-  getMainDish() {
-    this.menuService.getAllMainDish()
+  getMainDishes() {
+    this.menuService.getAllMainDishes()
       .subscribe(data => this.mainDishes = data);
   }
 
@@ -41,8 +42,8 @@ export class MenuComponent implements OnInit {
       .subscribe(data => this.sushi = data);
   }
 
-  getDessert() {
-    this.menuService.getAllDesert()
+  getDesserts() {
+    this.menuService.getAllDeserts()
       .subscribe(data => this.desserts = data);
   }
 

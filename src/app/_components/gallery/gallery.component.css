@@ -1,0 +1,22 @@
+.gallery-wrapper {
+  position: absolute;
+  background: var(--smoke);
+}
+
+.gallery-container {
+  overflow: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  height: 85vh;
+  margin-top: 15vh;
+  padding-bottom: 5vh;
+  gap: 20px;
+}
+
+.gallery-container img {
+  width: 300px;
+  height: 180px;
+  filter: var(--shadow);
+  border-radius: 5px;
+}
