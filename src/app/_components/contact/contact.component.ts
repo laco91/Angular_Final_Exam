@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { NavbarService } from 'src/app/_services/navbar.service';
+import { VisibilityService } from 'src/app/_services/service_collector';
 
 @Component({
   selector: 'app-contact',
@@ -8,10 +8,11 @@ import { NavbarService } from 'src/app/_services/navbar.service';
 })
 export class ContactComponent implements OnInit {
 
-  constructor(public nav: NavbarService) { }
+  constructor(public visibility: VisibilityService) { }
 
   ngOnInit(): void {
-    this.nav.show();
+    this.visibility.showNavbar();
+    this.visibility.hideSidebar();
   }
 
 }

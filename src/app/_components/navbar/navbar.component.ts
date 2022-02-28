@@ -1,7 +1,7 @@
 import { Location } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { NavbarService } from 'src/app/_services/service_collector';
+import { VisibilityService } from 'src/app/_services/service_collector';
 
 @Component({
   selector: 'app-navbar',
@@ -12,7 +12,7 @@ export class NavbarComponent implements OnInit {
 
   isClicked!: boolean;
 
-  constructor(public nav: NavbarService,
+  constructor(public visibility: VisibilityService,
               private router: Router,
               private location: Location) { }
 
@@ -23,9 +23,9 @@ export class NavbarComponent implements OnInit {
   navigateTo() {
     this.isClicked = !this.isClicked;
     if (this.isClicked){
-      this.router.navigate(['/admin']);
+      this.router.navigate(['/admin/dashboard']);
     } else {
-      this.location.back();
+      this.router.navigate(['/']);
     }
   }
 }

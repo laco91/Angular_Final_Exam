@@ -8,7 +8,8 @@ import { AppComponent } from './app.component';
 import { BookingComponent, ContactComponent,
          GalleryComponent, MenuComponent,
          NavbarComponent, HomeComponent,
-         AdminComponent } from './_components/component_collector';
+         DashboardComponent, GalleryPanelComponent,
+         MenuPanelComponent, SidenavComponent} from './_components/component_collector';
          
 @NgModule({
   declarations: [
@@ -19,7 +20,10 @@ import { BookingComponent, ContactComponent,
     BookingComponent,
     ContactComponent,
     HomeComponent,
-    AdminComponent
+    MenuPanelComponent,
+    GalleryPanelComponent,
+    DashboardComponent,
+    SidenavComponent
   ],
   imports: [
     BrowserModule,

@@ -22,3 +22,10 @@
   /* Styles */
   --shadow: drop-shadow(0 0 0.1rem var(--black));
 }
+
+app-dashboard, app-menu-panel, app-gallery-panel {
+  display: block;
+  height: 100vh;
+  width: 100vw;
+  background: var(--smoke);
+}

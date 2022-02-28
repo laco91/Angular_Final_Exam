@@ -1,2 +1,2 @@
-export { Menu } from '../_models/menu';
-export { Gallery } from '../_models/gallery';
+export { Menu } from './menu';
+export { Gallery } from './gallery';

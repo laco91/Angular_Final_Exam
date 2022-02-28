@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Gallery } from 'src/app/_models/model_collector';
-import { NavbarService } from 'src/app/_services/navbar.service';
+import { VisibilityService } from 'src/app/_services/visibility.service';
 import { GalleryService } from 'src/app/_services/service_collector';
 
 @Component({
@@ -12,11 +12,12 @@ export class GalleryComponent implements OnInit {
 
   images: Gallery[] = [];
 
-  constructor(public nav: NavbarService,
+  constructor(public visibility: VisibilityService,
               private galleryService: GalleryService) { }
 
   ngOnInit(): void {
-    this.nav.show();
+    this.visibility.showNavbar();
+    this.visibility.hideSidebar();
     this.getImages();
   }
 

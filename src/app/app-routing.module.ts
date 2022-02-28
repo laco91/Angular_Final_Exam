@@ -1,7 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AdminComponent, BookingComponent, HomeComponent, ContactComponent,
-         GalleryComponent, MenuComponent } from './_components/component_collector';
+import { BookingComponent, HomeComponent, ContactComponent,
+         GalleryComponent, MenuComponent, DashboardComponent,
+         MenuPanelComponent, GalleryPanelComponent} from './_components/component_collector';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -10,7 +11,9 @@ const routes: Routes = [
   { path: 'gallery', component: GalleryComponent },
   { path: 'booking', component: BookingComponent },
   { path: 'contact', component: ContactComponent },
-  { path: 'admin', component: AdminComponent }
+  { path: 'admin/dashboard', component: DashboardComponent },
+  { path: 'admin/menu-panel', component: MenuPanelComponent },
+  { path: 'admin/gallery-panel', component: GalleryPanelComponent }
 ];
 
 @NgModule({
