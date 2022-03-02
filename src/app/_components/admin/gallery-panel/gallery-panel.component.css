@@ -1,0 +1,7 @@
+.gallery-panel-wrapper {
+  height: 100vh;
+  width: calc(100% - 5rem);
+  margin-left: 5rem;
+  padding: 3rem;
+  background: var(--smoke);
+}

@@ -1,13 +1,26 @@
-<nav class="sidenav-container" *ngIf="visibility.sidenavVisible">
-  <div class="sidenav-list">
-    <a class="sidenav-item" routerLink="admin/dashboard" routerLinkActive="active" >
-      <i class="fa-solid fa-house"></i> Dashboard
-    </a>
-    <a class="sidenav-item" routerLink="admin/menu-panel" routerLinkActive="active">
-      <i class="fa-solid fa-clipboard-list"></i> Menu
-    </a>
-    <a class="sidenav-item" routerLink="admin/gallery-panel" routerLinkActive="active">
-      <i class="fa-solid fa-image"></i> Gallery
-    </a>
-  </div>
-</nav>
+<aside class="sidenav-container" [ngClass]="collapsed ? 'sidenav-collapsed' : ''"
+*ngIf="visibility.sidenavVisible">
+  <button class="sidenav-btn" (click)="toggleCollapse()">
+    <i class="fa-solid fa-bars"></i>
+  </button>
+  <nav class="sidenav-nav">
+    <div class="sidenav-item">
+      <a class="sidenav-link" routerLink="admin/dashboard" routerLinkActive="active" >
+        <i class="sidenav-link-icon fas fa-home"></i>
+        <div class="sidenav-link-text" *ngIf="collapsed">Dashboard</div>
+      </a>
+    </div>
+    <div class="sidenav-item">
+      <a class="sidenav-link" routerLink="admin/menu-panel" routerLinkActive="active">
+        <i class="sidenav-link-icon far fa-clipboard"></i>
+        <div class="sidenav-link-text" *ngIf="collapsed">Menu</div>
+      </a>
+    </div>
+    <div class="sidenav-item">
+      <a class="sidenav-link" routerLink="admin/gallery-panel" routerLinkActive="active">
+        <i class="sidenav-link-icon far fa-image"></i>
+        <div class="sidenav-link-text" *ngIf="collapsed">Gallery</div>
+      </a>
+    </div>
+  </nav>
+</aside>

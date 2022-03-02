@@ -1,4 +1,4 @@
 export interface Gallery {
-  "imgSrc": string,
-  "imgAlt": string
+  imgSrc: string;
+  imgAlt: string
 }

@@ -8,6 +8,8 @@ import { VisibilityService } from 'src/app/_services/service_collector';
 })
 export class DashboardComponent implements OnInit {
 
+  collapsed!: boolean;
+
   constructor(public visibility: VisibilityService) { }
 
   ngOnInit(): void {

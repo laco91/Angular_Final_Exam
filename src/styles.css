@@ -11,6 +11,10 @@
   box-sizing: border-box;
 }
 
+body {
+  position: relative;
+}
+
 :root {
   /* Colors */
   --black: #000000;
@@ -23,9 +27,11 @@
   --shadow: drop-shadow(0 0 0.1rem var(--black));
 }
 
-app-dashboard, app-menu-panel, app-gallery-panel {
+
+/* Admin playground */
+/* app-dashboard, app-menu-panel, app-gallery-panel {
   display: block;
   height: 100vh;
-  width: 100vw;
+  width: calc(100% - 5rem);
   background: var(--smoke);
-}
+} */

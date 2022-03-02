@@ -1,1 +1,65 @@
-<p>menu-panel works!</p>
+<main class="menu-panel-wrapper">
+  <nav ngbNav #nav="ngbNav" class="nav-tabs">
+    <li ngbNavItem>
+      <!-- Drinks -->
+      <a ngbNavLink>Drinks</a>
+      <ng-template ngbNavContent>
+        <div class="menu-panel-container">
+          <div class="menu-panel-item" *ngFor="let drink of drinks">
+            <!-- Supply Details -->
+            <div class="menu-panel-supply">
+              <span>Name: <span>{{ drink.name }}</span></span>
+              <span>Price: <span>{{ drink.price | currency }}</span></span>
+            </div>
+            <!-- Edit and Delete -->
+            <div class="btn-group">
+              <button class="btn btn-warning">
+                Edit
+              </button>
+              <button class="btn btn-danger">
+                Delete
+              </button>
+            </div>
+          </div>
+          <!-- New Supply -->
+          <div class="new-supply-container">
+            <button class="btn btn-primary new-supply-btn" (click)="isClicked()">
+              New supply
+            </button>
+          </div>
+        </div>
+      </ng-template>
+    </li>
+    <li ngbNavItem>
+      <!-- Main Dishes -->
+      <a ngbNavLink>Main Dishes</a>
+      <ng-template ngbNavContent>
+        <div class="menu-panel-item" *ngFor="let mainDish of mainDishes">
+          <span>{{ mainDish.name }}</span>
+          <span>{{ mainDish.price | currency }}</span>
+        </div>
+      </ng-template>
+    </li>
+    <li ngbNavItem>
+      <!-- Sushi -->
+      <a ngbNavLink>Sushi</a>
+      <ng-template ngbNavContent>
+        <div class="menu-panel-item" *ngFor="let sushi of sushi">
+          <span>{{ sushi.name }}</span>
+          <span>{{ sushi.price | currency }}</span>
+        </div>
+      </ng-template>
+    </li>
+    <li ngbNavItem>
+      <!-- Desserts -->
+      <a ngbNavLink>Desserts</a>
+      <ng-template ngbNavContent>
+        <div class="menu-panel-item" *ngFor="let dessert of desserts">
+          <span>{{ dessert.name }}</span>
+          <span>{{ dessert.price | currency }}</span>
+        </div>
+      </ng-template>
+    </li>
+  </nav>
+  <div [ngbNavOutlet]="nav"></div>
+</main>

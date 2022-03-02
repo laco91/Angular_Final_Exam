@@ -8,9 +8,15 @@ import { VisibilityService } from 'src/app/_services/service_collector';
 })
 export class SidenavComponent implements OnInit {
 
+  collapsed!: boolean;
+
   constructor(public visibility: VisibilityService) { }
 
   ngOnInit(): void {
+  }
+
+  toggleCollapse(): void {
+    this.collapsed = !this.collapsed;
   }
 
 }
