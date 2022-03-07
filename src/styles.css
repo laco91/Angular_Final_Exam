@@ -26,12 +26,3 @@ body {
   /* Styles */
   --shadow: drop-shadow(0 0 0.1rem var(--black));
 }
-
-
-/* Admin playground */
-/* app-dashboard, app-menu-panel, app-gallery-panel {
-  display: block;
-  height: 100vh;
-  width: calc(100% - 5rem);
-  background: var(--smoke);
-} */
