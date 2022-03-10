@@ -22,7 +22,7 @@
   margin-top: 1rem;
   box-shadow: 0 .2rem .5rem var(--coal);
   border-radius: .5rem;
-  background: #ffffff;
+  background: var(--white);
 }
 
 .menu-panel-product {
