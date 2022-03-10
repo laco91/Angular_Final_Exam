@@ -99,21 +99,6 @@
       "id": 20,
       "name": "Drink name 20",
       "price": 10
-    },
-    {
-      "name": "Shör",
-      "price": "2",
-      "id": 21
-    },
-    {
-      "name": "Sake",
-      "price": "20",
-      "id": 22
-    },
-    {
-      "name": "Kávé",
-      "price": "5",
-      "id": 26
     }
   ],
   "mainDishes": [
@@ -216,11 +201,6 @@
       "id": 20,
       "name": "Main dish name 20",
       "price": 10
-    },
-    {
-      "name": "Ramen",
-      "price": "6",
-      "id": 21
     }
   ],
   "sushi": [
@@ -323,11 +303,6 @@
       "id": 20,
       "name": "Sushi name 20",
       "price": 10
-    },
-    {
-      "name": "Maki",
-      "price": "8",
-      "id": 21
     }
   ],
   "desserts": [
@@ -430,11 +405,6 @@
       "id": 20,
       "name": "Dessert name 20",
       "price": 10
-    },
-    {
-      "name": "Mochi",
-      "price": "1",
-      "id": 21
     }
   ],
   "gallery": [

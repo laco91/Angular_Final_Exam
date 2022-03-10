@@ -32,7 +32,7 @@ export class MenuService {
     return this.http.get<Menu[]>(`${environment.jsonUrl}/desserts`, httpOption);
   }
 
-  // Add New Supply
+  // Add New Product
   addDrink(drink: Menu) {
     return this.http.post<Menu>(`${environment.jsonUrl}/drinks`, drink, httpOption)
     .pipe(
@@ -63,6 +63,24 @@ export class MenuService {
       tap(dessert => console.log(`New main dessert = ${JSON.stringify(dessert)}`)),
       catchError(error => error)
     );
+  }
+
+  // Update Product
+  updateDrink(drink: Menu, id: number) {
+    return this.http.put<Menu>(`${environment.jsonUrl}/drinks/${id}`, drink, httpOption)
+    .pipe(
+      tap(updatedDrink => console.log(`Updated drink = ${JSON.stringify(updatedDrink)}`)),
+      catchError(error => error)
+      );
+  }
+
+  //Delete Product
+  deleteDrink(id: number) {
+    return this.http.delete<Menu>(`${environment.jsonUrl}/drinks/${id}`, httpOption)
+    .pipe(
+      tap(deletedDrink => console.log(`Deleted drink = ${JSON.stringify(deletedDrink)}`)),
+      catchError(error => error)
+      );
   }
 
 }

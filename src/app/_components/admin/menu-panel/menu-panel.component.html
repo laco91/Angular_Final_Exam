@@ -6,42 +6,60 @@
       <ng-template ngbNavContent>
         <div class="menu-panel-container">
           <div class="menu-panel-item" *ngFor="let drink of drinks">
-            <!-- Supply Details -->
-            <div class="menu-panel-supply">
-              <span>Name: <span>{{ drink.name }}</span></span>
-              <span>Price: <span>{{ drink.price | currency }}</span></span>
+            <!-- Product Details -->
+            <div class="menu-panel-product">
+              <span>{{ drink.name }}</span>
+              <span>{{ drink.price | currency }}</span>
             </div>
             <!-- Edit and Delete -->
             <div class="btn-group">
-              <button class="btn btn-warning">
+              <button type="button" class="btn btn-warning" (click)="editThisDrink(drink)"
+              data-bs-toggle="modal" data-bs-target="#product-modal">
                 Edit
               </button>
-              <button class="btn btn-danger">
+              <button type="button" class="btn btn-danger" (click)="deleteThisDrink(drink)">
                 Delete
               </button>
             </div>
           </div>
-          <!-- New Supply -->
-          <div class="new-supply-container">
-            <button class="btn btn-primary new-supply-btn" (click)="isClicked()">
-              New supply
+          <!-- New Product -->
+          <div class="new-product-container">
+            <button class="btn btn-primary new-product-btn"
+            data-bs-toggle="modal" data-bs-target="#product-modal">
+              <i class="fa-solid fa-plus"></i> Add New Product
             </button>
-            <form class="add-new-supply" [formGroup]="supplyForm" *ngIf="clicked"
-            (ngSubmit)="onSubmitDrink()">
-              <div class="new-supply-datas">
-                <label>
-                  Name:
-                  <input type="text" formControlName="name">
-                </label>
-                <label>
-                  Price:
-                  <input type="text" formControlName="price">
-                </label>
+          </div> 
+          <!-- Modal -->
+          <div class="modal fade" id="product-modal" tabindex="-1" data-bs-backdrop="static" aria-labelledby="addNewSupply" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">Add New Product</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>                
+                <div class="modal-body d-flex justify-content-center">
+                  <form [formGroup]="productForm" >
+                    <div class="new-product-datas">
+                      <label> Name: 
+                        <input type="text" formControlName="name" placeholder="Enter the product name">
+                      </label>
+                      <label> Price: 
+                        <input type="text" formControlName="price" placeholder="Enter the price ($)">
+                      </label>
+                    </div>
+                  </form>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-warning" (click)="updateThisDrink()">
+                    Update
+                  </button>
+                  <button type="submit" class="btn btn-success" (click)="addNewDrink()"
+                  [disabled]="!productForm.valid">
+                    Save
+                  </button>
+                </div>
               </div>
-              <button class="btn btn-success" type="submit" [disabled]="!supplyForm.valid">
-                Save
-              </button>
-            </form>
+            </div>
           </div>
         </div>
       </ng-template>
@@ -50,138 +68,18 @@
       <!-- Main Dishes -->
       <a ngbNavLink>Main Dishes</a>
       <ng-template ngbNavContent>
-        <div class="menu-panel-container">
-          <div class="menu-panel-item" *ngFor="let mainDish of mainDishes">
-            <!-- Supply Details -->
-            <div class="menu-panel-supply">
-              <span>{{ mainDish.name }}</span>
-              <span>{{ mainDish.price | currency }}</span>
-            </div>
-            <!-- Edit and Delete -->
-            <div class="btn-group">
-              <button class="btn btn-warning">
-                Edit
-              </button>
-              <button class="btn btn-danger">
-                Delete
-              </button>
-            </div>
-          </div>
-          <!-- New Supply -->
-          <div class="new-supply-container">
-            <button class="btn btn-primary new-supply-btn" (click)="isClicked()">
-              New supply
-            </button>
-            <form class="add-new-supply" [formGroup]="supplyForm" *ngIf="clicked"
-            (ngSubmit)="onSubmitMainDish()">
-              <div class="new-supply-datas">
-                <label>
-                  Name:
-                  <input type="text" formControlName="name">
-                </label>
-                <label>
-                  Price:
-                  <input type="text" formControlName="price">
-                </label>
-              </div>
-              <button class="btn btn-success" type="submit" [disabled]="!supplyForm.valid">
-                Save
-              </button>
-            </form>
-          </div>
-        </div>
       </ng-template>
     </li>
     <li ngbNavItem>
       <!-- Sushi -->
       <a ngbNavLink>Sushi</a>
       <ng-template ngbNavContent>
-        <div class="menu-panel-container">
-          <div class="menu-panel-item" *ngFor="let sushi of sushi">
-            <!-- Supply Details -->
-            <div class="menu-panel-supply">
-              <span>{{ sushi.name }}</span>
-              <span>{{ sushi.price | currency }}</span>
-            </div>
-            <!-- Edit and Delete -->
-            <div class="btn-group">
-              <button class="btn btn-warning">
-                Edit
-              </button>
-              <button class="btn btn-danger">
-                Delete
-              </button>
-            </div>
-          </div>
-          <!-- New Supply -->
-          <div class="new-supply-container">
-            <button class="btn btn-primary new-supply-btn" (click)="isClicked()">
-              New supply
-            </button>
-            <form class="add-new-supply" [formGroup]="supplyForm" *ngIf="clicked"
-            (ngSubmit)="onSubmitSushi()">
-              <div class="new-supply-datas">
-                <label>
-                  Name:
-                  <input type="text" formControlName="name">
-                </label>
-                <label>
-                  Price:
-                  <input type="text" formControlName="price">
-                </label>
-              </div>
-              <button class="btn btn-success" type="submit" [disabled]="!supplyForm.valid">
-                Save
-              </button>
-            </form>
-          </div>
-        </div>
       </ng-template>
     </li>
     <li ngbNavItem>
       <!-- Desserts -->
       <a ngbNavLink>Desserts</a>
       <ng-template ngbNavContent>
-        <div class="menu-panel-container">
-          <div class="menu-panel-item" *ngFor="let dessert of desserts">
-            <!-- Supply Details -->
-            <div class="menu-panel-supply">
-              <span>{{ dessert.name }}</span>
-              <span>{{ dessert.price | currency }}</span>
-            </div>
-            <!-- Edit and Delete -->
-            <div class="btn-group">
-              <button class="btn btn-warning">
-                Edit
-              </button>
-              <button class="btn btn-danger">
-                Delete
-              </button>
-            </div>
-          </div>
-          <!-- New Supply -->
-          <div class="new-supply-container">
-            <button class="btn btn-primary new-supply-btn" (click)="isClicked()">
-              New supply
-            </button>
-            <form class="add-new-supply" [formGroup]="supplyForm" *ngIf="clicked"
-            (ngSubmit)="onSubmitDessert()">
-              <div class="new-supply-datas">
-                <label>
-                  Name:
-                  <input type="text" formControlName="name">
-                </label>
-                <label>
-                  Price:
-                  <input type="text" formControlName="price">
-                </label>
-              </div>
-              <button class="btn btn-success" type="submit" [disabled]="!supplyForm.valid">
-                Save
-              </button>
-            </form>
-          </div>
-        </div>
       </ng-template>
     </li>
   </nav>

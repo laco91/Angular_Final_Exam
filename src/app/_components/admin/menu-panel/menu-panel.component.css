@@ -25,19 +25,19 @@
   background: #ffffff;
 }
 
-.menu-panel-supply {
+.menu-panel-product {
   width: 28rem;
   display: flex;
   justify-content: space-between;
   margin-right: 2rem;
 }
 
-.new-supply-container {
+.new-product-container {
   width: 100%;
   text-align: center;
 }
 
-.new-supply-btn {
+.new-product-btn {
   width: 48%;
   padding: 1rem;
   margin-top: 2rem;
@@ -47,7 +47,7 @@
   font-weight: 600;
 }
 
-.add-new-supply {
+.add-new-product {
   height: 10rem;
   width: 18rem;
   padding: 1.5rem;
@@ -56,16 +56,16 @@
   border-radius: .5rem;
 }
 
-.add-new-supply button {
+.add-new-product button {
   margin-top: 1rem;
 }
 
-.new-supply-datas {
+.new-product-datas {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
 }
 
-.new-supply-datas label {
+.new-product-datas label {
   margin-bottom: .3rem;
 }

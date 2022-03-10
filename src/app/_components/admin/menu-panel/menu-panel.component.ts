@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { ActivatedRoute } from '@angular/router';
 import { Menu } from 'src/app/_models/model_collector';
 import { MenuService, VisibilityService } from 'src/app/_services/service_collector';
 
@@ -10,8 +11,8 @@ import { MenuService, VisibilityService } from 'src/app/_services/service_collec
 })
 export class MenuPanelComponent implements OnInit {
 
-  clicked!: boolean;
-  supplyForm!: FormGroup;
+  productForm!: FormGroup;
+  drink!: Menu;
 
   drinks: Menu[] = [];
   mainDishes: Menu[] = [];
@@ -20,7 +21,8 @@ export class MenuPanelComponent implements OnInit {
 
   constructor(public visibility: VisibilityService,
               private menuService: MenuService,
-              private fb: FormBuilder
+              private fb: FormBuilder,
+              private route: ActivatedRoute
               ) { }
 
   ngOnInit(): void {
@@ -30,7 +32,8 @@ export class MenuPanelComponent implements OnInit {
     this.getMainDishes();
     this.getSushi();
     this.getDesserts();
-    this.createSupplyForm();
+    this.createProductForm();
+    // this.getDrinkById();
   }
 
   // Get Datas
@@ -54,63 +57,83 @@ export class MenuPanelComponent implements OnInit {
       .subscribe(data => this.desserts = data);
   }
 
-  // Add New Supply
-  createSupplyForm() {
-    this.supplyForm = this.fb.group({
+  // Product Form
+  createProductForm() {
+    this.productForm = this.fb.group({
       name: ['', Validators.required],
       price: ['', Validators.required]
     });
   }
 
-  // Submits
-  onSubmitDrink() {
+  // Add New Product
+  addNewDrink() {
     let obj: Menu = {
-      name: this.supplyForm.value.name,
-      price: this.supplyForm.value.price
+      name: this.productForm.value.name,
+      price: this.productForm.value.price
     }
     this.menuService.addDrink(obj).subscribe(() => {
       this.getDrinks();
     });
-    this.supplyForm.reset();
+    this.productForm.reset();
   }
 
-  onSubmitMainDish() {
+  addNewMainDish() {
     let obj: Menu = {
-      name: this.supplyForm.value.name,
-      price: this.supplyForm.value.price
+      name: this.productForm.value.name,
+      price: this.productForm.value.price
     }
     this.menuService.addMainDish(obj).subscribe(() => {
       this.getMainDishes();
     });
-    this.supplyForm.reset();
+    this.productForm.reset();
   }
 
-  onSubmitSushi() {
+  addNewSushi() {
     let obj: Menu = {
-      name: this.supplyForm.value.name,
-      price: this.supplyForm.value.price
+      name: this.productForm.value.name,
+      price: this.productForm.value.price
     }
     this.menuService.addSushi(obj).subscribe(() => {
       this.getSushi();
     });
-    this.supplyForm.reset();
+    this.productForm.reset();
   }
 
-  onSubmitDessert() {
+  addNewDessert() {
     let obj: Menu = {
-      name: this.supplyForm.value.name,
-      price: this.supplyForm.value.price
+      name: this.productForm.value.name,
+      price: this.productForm.value.price
     }
     this.menuService.addDessert(obj).subscribe(() => {
       this.getDesserts();
     });
-    this.supplyForm.reset();
+    this.productForm.reset();
   }
 
-  // Side Functions
-  isClicked(): void {
-    this.clicked = !this.clicked;
-    console.log(this.clicked);
+  // Update Product
+  updateThisDrink() {
+    let obj: Menu = {
+      name: this.productForm.value.name,
+      price: this.productForm.value.price
+    }
+    console.log(obj);
+    // this.menuService.updateDrink(obj, obj.id).subscribe(() => {
+    //   this.getDrinks();
+    // });
+    // this.productForm.reset();
+  }
+
+  // Edit Product
+  editThisDrink(product: any): void {
+    this.productForm.controls['name'].setValue(product.name);
+    this.productForm.controls['price'].setValue(product.price);
+    console.log(product);
+  }
+  // Delete Product
+  deleteThisDrink(data: any): void  {
+    confirm('Are you sure?') ?
+    this.menuService.deleteDrink(data.id).subscribe(() => 
+      this.getDrinks()) : '';
   }
 
 }
