@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { ActivatedRoute } from '@angular/router';
 import { Menu } from 'src/app/_models/model_collector';
 import { MenuService, VisibilityService } from 'src/app/_services/service_collector';
+
 
 @Component({
   selector: 'app-menu-panel',
@@ -13,6 +13,10 @@ export class MenuPanelComponent implements OnInit {
 
   productForm!: FormGroup;
   drink!: Menu;
+  objIdToEdit!: number;
+  modalBtnSwap!: boolean;
+  modalTitleSwap!: string;
+
 
   drinks: Menu[] = [];
   mainDishes: Menu[] = [];
@@ -21,8 +25,7 @@ export class MenuPanelComponent implements OnInit {
 
   constructor(public visibility: VisibilityService,
               private menuService: MenuService,
-              private fb: FormBuilder,
-              private route: ActivatedRoute
+              private fb: FormBuilder
               ) { }
 
   ngOnInit(): void {
@@ -33,7 +36,6 @@ export class MenuPanelComponent implements OnInit {
     this.getSushi();
     this.getDesserts();
     this.createProductForm();
-    // this.getDrinkById();
   }
 
   // Get Datas
@@ -110,25 +112,36 @@ export class MenuPanelComponent implements OnInit {
     this.productForm.reset();
   }
 
+  // Edit Product Button
+  editProduct(product: any): void {
+    this.modalBtnSwap = true;
+    this.modalTitleSwap = "Edit Product";
+    this.productForm.controls['name'].setValue(product.name);
+    this.productForm.controls['price'].setValue(product.price);
+    this.objIdToEdit = product.id;
+    console.log(this.objIdToEdit);
+  }
+
+  // Update Product Button
+  addNewProduct() {
+    this.modalBtnSwap = false;
+    this.modalTitleSwap = "Add New Product";
+    this.productForm.reset();
+  }
+
   // Update Product
   updateThisDrink() {
     let obj: Menu = {
       name: this.productForm.value.name,
       price: this.productForm.value.price
     }
-    console.log(obj);
-    // this.menuService.updateDrink(obj, obj.id).subscribe(() => {
-    //   this.getDrinks();
-    // });
-    // this.productForm.reset();
+    console.log(this.objIdToEdit);
+    this.menuService.updateDrink(obj, this.objIdToEdit).subscribe(() => {
+      this.getDrinks();
+    });
+    
   }
 
-  // Edit Product
-  editThisDrink(product: any): void {
-    this.productForm.controls['name'].setValue(product.name);
-    this.productForm.controls['price'].setValue(product.price);
-    console.log(product);
-  }
   // Delete Product
   deleteThisDrink(data: any): void  {
     confirm('Are you sure?') ?

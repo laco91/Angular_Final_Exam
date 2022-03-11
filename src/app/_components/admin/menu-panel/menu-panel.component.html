@@ -1,7 +1,7 @@
 <main class="menu-panel-wrapper">
   <nav ngbNav #nav="ngbNav" class="nav-tabs">
     <li ngbNavItem>
-      <!-- Drinks -->
+      <!-- Drinks Panel -->
       <a ngbNavLink>Drinks</a>
       <ng-template ngbNavContent>
         <div class="menu-panel-container">
@@ -11,9 +11,9 @@
               <span>{{ drink.name }}</span>
               <span>{{ drink.price | currency }}</span>
             </div>
-            <!-- Edit and Delete -->
+            <!-- Edit and Delete Button -->
             <div class="btn-group">
-              <button type="button" class="btn btn-warning" (click)="editThisDrink(drink)"
+              <button type="button" class="btn btn-warning" (click)="editProduct(drink)"
               data-bs-toggle="modal" data-bs-target="#product-modal">
                 Edit
               </button>
@@ -22,19 +22,20 @@
               </button>
             </div>
           </div>
-          <!-- New Product -->
+          <!-- New Product Button -->
           <div class="new-product-container">
             <button class="btn btn-primary new-product-btn"
-            data-bs-toggle="modal" data-bs-target="#product-modal">
+            data-bs-toggle="modal" data-bs-target="#product-modal"
+            (click)="addNewProduct()">
               <i class="fa-solid fa-plus"></i> Add New Product
             </button>
           </div> 
-          <!-- Modal -->
+          <!-- Add/Edit Modal -->
           <div class="modal fade" id="product-modal" tabindex="-1" data-bs-backdrop="static" aria-labelledby="addNewSupply" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">
               <div class="modal-content">
                 <div class="modal-header">
-                  <h5 class="modal-title">Add New Product</h5>
+                  <h5 class="modal-title">{{ modalTitleSwap }}</h5>
                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>                
                 <div class="modal-body d-flex justify-content-center">
@@ -50,10 +51,13 @@
                   </form>
                 </div>
                 <div class="modal-footer">
-                  <button type="button" class="btn btn-warning" (click)="updateThisDrink()">
+                  <button type="button" class="btn btn-success" data-bs-dismiss="modal"
+                  *ngIf="modalBtnSwap" (click)="updateThisDrink()"
+                  [disabled]="!productForm.valid">
                     Update
                   </button>
-                  <button type="submit" class="btn btn-success" (click)="addNewDrink()"
+                  <button type="submit" class="btn btn-success"
+                  *ngIf="!modalBtnSwap" (click)="addNewDrink()"
                   [disabled]="!productForm.valid">
                     Save
                   </button>
@@ -65,19 +69,19 @@
       </ng-template>
     </li>
     <li ngbNavItem>
-      <!-- Main Dishes -->
+      <!-- Main Dishes Panel -->
       <a ngbNavLink>Main Dishes</a>
       <ng-template ngbNavContent>
       </ng-template>
     </li>
     <li ngbNavItem>
-      <!-- Sushi -->
+      <!-- Sushi Panel -->
       <a ngbNavLink>Sushi</a>
       <ng-template ngbNavContent>
       </ng-template>
     </li>
     <li ngbNavItem>
-      <!-- Desserts -->
+      <!-- Desserts Panel -->
       <a ngbNavLink>Desserts</a>
       <ng-template ngbNavContent>
       </ng-template>

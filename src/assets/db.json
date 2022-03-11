@@ -99,21 +99,6 @@
       "id": 20,
       "name": "Drink name 20",
       "price": 10
-    },
-    {
-      "name": "Shör",
-      "price": "2",
-      "id": 21
-    },
-    {
-      "name": "Sake",
-      "price": "20",
-      "id": 22
-    },
-    {
-      "name": "Kávé",
-      "price": "5",
-      "id": 26
     }
   ],
   "mainDishes": [
