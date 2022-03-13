@@ -26,7 +26,7 @@
   width: 20rem;
   padding: 1.5rem;
   background: var(--coal);
-  box-shadow: 0 .2rem .5rem var(--coal);
+  box-shadow: 0 .2rem .5rem var(--black);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -101,5 +101,5 @@
   font-size: 1.3rem;
   border-radius: .3rem;
   padding: .5rem 2rem;
-  box-shadow: 0 .2rem .5rem var(--coal);
+  box-shadow: 0 .2rem .5rem var(--black);
 }

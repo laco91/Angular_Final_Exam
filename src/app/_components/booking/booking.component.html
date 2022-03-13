@@ -1,1 +1,53 @@
-<p>booking works!</p>
+<main class="booking-wrapper">
+  <div class="booking-container">
+    <form class="booking-info">
+      <section class="booking-pickers">
+        <i class="fa-regular fa-user">
+          <select class="personpicker" name="personpicker">
+            <option value="1">1 person</option>
+            <option value="2">2 person</option>
+            <option value="3">3 person</option>
+            <option value="4">4 person</option>
+            <option value="5">5 person</option>
+            <option value="6">6 person</option>
+            <option value="7">7 person</option>
+            <option value="8">8 person</option>
+            <option value="9">9 person</option>
+            <option value="10">10 person</option>
+            <option value="11">Big party...</option>
+          </select>
+        </i>
+        <i class="fa-regular fa-calendar">
+          <input class="datepicker" type="date">
+        </i>
+        <i class="fa-regular fa-clock">
+          <select class="timepicker" name="timepicker">
+            <option value="11:00">11:00 AM</option>
+            <option value="11:30">11:30 AM</option>
+            <option value="12:00">12:00 PM</option>
+            <option value="12:30">12:30 PM</option>
+            <option value="13:00">1:00 PM</option>
+            <option value="13:30">1:30 PM</option>
+            <option value="14:00">2:00 PM</option>
+            <option value="14:30">2:30 PM</option>
+            <option value="15:00">3:00 PM</option>
+            <option value="15:30">3:30 PM</option>
+          </select>
+        </i>
+      </section>
+      <button class="booking-btn" type="submit">Book a table</button>
+      <section class="booking-opening-hour">
+        <h2>Opening Hour</h2>
+        <ul>
+          <li>Monday - Friday</li>
+          <li>11:00 AM - 11:00 PM</li>
+          <li>Saturday</li>
+          <li>11:00 AM - 12:00 PM</li>
+          <li>Sunday</li>
+          <li>12:00 AM - 10:00 PM</li>
+        </ul>
+      </section>
+    </form>
+    <img class="booking-img" src="assets/imgs/booking.jpg" alt="booking">
+  </div>
+</main>

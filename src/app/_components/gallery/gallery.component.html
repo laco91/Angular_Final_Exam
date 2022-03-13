@@ -1,7 +1,7 @@
 <main class="gallery-wrapper">
-  <section class="gallery-container">
+  <div class="gallery-container">
     <img *ngFor="let image of images"
     src="assets/imgs/gallery/{{ image.imgSrc }}"
     alt="{{ image.imgAlt }}">
-  </section>
+  </div>
 </main>

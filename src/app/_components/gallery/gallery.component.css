@@ -1,6 +1,10 @@
 .gallery-wrapper {
   position: absolute;
-  background: var(--smoke);
+  height: 100vh;
+  width: 100vw;
+  background: url('^assets/imgs/menubg.jpg');
+  background-size: cover;
+  background-position: center;
 }
 
 .gallery-container {

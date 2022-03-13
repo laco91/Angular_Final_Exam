@@ -1,0 +1,98 @@
+.booking-wrapper {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  background: url('^assets/imgs/menubg.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+}
+
+.booking-container {
+  height: 80vh;
+  width: 60rem;
+  margin-top: 15vh;
+  padding: 2rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.booking-info {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.booking-pickers {
+  margin-top: 2rem;
+}
+
+.booking-pickers i {
+  background: var(--white);
+  padding-left: .8rem;
+  border: .1rem solid var(--black);
+}
+
+.personpicker, .datepicker, .timepicker, .booking-btn {
+  height: 3rem;
+  width: 9rem;
+  padding: .5rem;
+  border-radius: 0;
+  border: none;
+  background: var(--white);
+  outline-style: none;
+  cursor: pointer;
+  position: relative;
+}
+
+.booking-btn {
+  color: var(--smoke);
+  background: var(--coal);
+  box-shadow: 0 .2rem .5rem var(--black);
+  font-size: 1.2rem;
+}
+
+.booking-opening-hour {
+  text-align: center;
+  background: var(--smoke);
+  padding: 1rem;
+  box-shadow: 0 .2rem .5rem var(--black);
+  border-radius: 1rem;
+}
+
+.booking-opening-hour h2 {
+  margin-bottom: 1rem;
+}
+
+.booking-opening-hour ul {
+  padding: 0;
+  list-style: none;
+}
+
+.booking-opening-hour li:nth-child(2n-1) {
+  text-decoration: underline;
+}
+
+.booking-opening-hour li:nth-child(2n) {
+  margin-bottom: 1rem;
+}
+
+.booking-img {
+  height: 20rem;
+  width: 20rem;
+  box-shadow: 0 .2rem .5rem var(--black);
+}
+
+/* Hide default calendar icon from datepicker and resize */
+input[type="date"]::-webkit-calendar-picker-indicator {
+  opacity: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  margin-left: 0;
+}
