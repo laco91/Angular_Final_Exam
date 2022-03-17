@@ -1,20 +1,31 @@
-<nav class="navbar-container" *ngIf="visibility.navbarVisible">
-  <a class="navbar-link" routerLink="/home">
-    <img src="assets/imgs/logo.png" alt="logo">
-  </a>
-  <a class="navbar-link" routerLink="/menu" routerLinkActive="active">
-    Me<span>n</span>u
-  </a>
-  <a class="navbar-link" routerLink="/gallery" routerLinkActive="active">
-    Gall<span>e</span>ry
-  </a>
-  <a class="navbar-link" routerLink="/booking" routerLinkActive="active">
-    Boo<span>k</span>ing
-  </a>
-  <a class="navbar-link" routerLink="/contact" routerLinkActive="active">
-    C<span>o</span>ntact
-  </a>
-</nav>
+<div class="navbar-wrapper">
+  <input class="navbar-toggle" id="navbar-toggle" type="checkbox">
+  <nav class="navbar-container" *ngIf="visibility.navbarVisible">
+    <img class="navbar-logo" src="assets/imgs/logo.png" alt="logo">
+    <a class="navbar-link" routerLink="/home">
+      Ho<span>m</span>e
+    </a>
+    <a class="navbar-link" routerLink="/about">
+      <span>A</span>bout
+    </a>
+    <a class="navbar-link" routerLink="/menu" routerLinkActive="active">
+      Me<span>n</span>u
+    </a>
+    <a class="navbar-link" routerLink="/gallery" routerLinkActive="active">
+      Gall<span>e</span>ry
+    </a>
+    <a class="navbar-link" routerLink="/booking" routerLinkActive="active">
+      Boo<span>k</span>ing
+    </a>
+    <a class="navbar-link" routerLink="/contact" routerLinkActive="active">
+      C<span>o</span>ntact
+    </a>
+  </nav>
+  <!-- Navbar Collapse Button -->
+  <label for="navbar-toggle" class="navbar-toggle-btn">
+    <i class="fa-solid fa-bars"></i>
+  </label>
+</div>
 
 <!-- Temporary button, it will be replace with login/register -->
 <div style="position: absolute; right: 0; top: 20px; margin-right: 20px; z-index: 2;">

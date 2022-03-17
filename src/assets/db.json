@@ -99,6 +99,11 @@
       "id": 20,
       "name": "Drink name 20",
       "price": 10
+    },
+    {
+      "name": "Shör",
+      "price": "6",
+      "id": 21
     }
   ],
   "mainDishes": [

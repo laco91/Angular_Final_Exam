@@ -1,5 +1,6 @@
 <aside class="sidenav-container" [ngClass]="collapsed ? 'sidenav-collapsed' : ''"
 *ngIf="visibility.sidenavVisible">
+  <!-- toggle button for collapse sidenav -->
   <button class="sidenav-btn" (click)="toggleCollapse()">
     <i class="fa-solid fa-bars"></i>
   </button>

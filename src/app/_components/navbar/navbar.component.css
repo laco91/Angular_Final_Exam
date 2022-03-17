@@ -1,16 +1,20 @@
-.navbar-container {
-  position: fixed;
-  height: 15vh;
+.navbar-wrapper {
   width: 100vw;
+  height: 15vh;
+  position: fixed;
+  z-index: 2;
   display: flex;
   justify-content: center;
+}
+
+.navbar-container {
+  display: flex;
   align-items: center;
-  z-index: 2;
 }
 
 .navbar-link {
   padding: 10px;
-  font-size: 2em;
+  font-size: 1.7em;
   font-weight: bold;
   font-family: Hirokawa;
   text-decoration: none;
@@ -29,4 +33,57 @@
 
 .navbar-container .active {
   color: var(--golden);
+}
+
+/* ========================
+    Navbar Collapse Button
+   ======================== */
+.navbar-toggle {
+  display: none;
+}
+
+.navbar-toggle:checked ~ nav {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.navbar-toggle-btn {
+  position: absolute;
+  top: 1.5rem;
+  left: 1.5rem;
+  display: none;
+  filter: var(--shadow);
+}
+
+.navbar-toggle-btn i {
+  font-size: 2rem;
+  color: var(--smoke);
+  cursor: pointer;
+}
+
+/* ===================
+    Responsive Design
+   =================== */
+@media screen and (max-width: 920px) {
+  .navbar-toggle-btn {
+    display: block;
+  }
+
+  .navbar-wrapper {
+    display: block;
+  }
+
+  .navbar-container {
+    display: none;
+    background: rgba(0, 0, 0, .7);
+    height: 100vh;
+    width: 14rem;
+    padding: 1rem;
+    box-shadow: 0 .2rem .5rem var(--black);
+  }
+
+  .navbar-logo {
+    opacity: 0;
+  }
 }

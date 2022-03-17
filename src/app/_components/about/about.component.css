@@ -1,0 +1,95 @@
+/* ==========
+    Top Page 
+   ========== */
+.about-top {
+  min-height: 100vh;
+  width: 100%;
+  background: var(--smoke);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 15vh;
+}
+
+.content-top {
+  width: 85%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-top {
+  width: 30rem;
+  max-width: 100%;
+  box-shadow: 0 .2rem .5rem var(--black);
+}
+
+.text-top {
+  color: var(--ebonyBlack);
+  text-align: justify;
+  padding: 2rem;
+}
+
+.text-top h1 {
+  color: var(--red);
+}
+
+/* =============
+    Bottom Page 
+   ============= */
+.about-bottom {
+  min-height: 100vh;
+  width: 100%;
+  background: var(--ebonyBlack);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 2rem;
+}
+
+.content-bottom {
+  width: 85%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row-reverse;
+}
+
+.img-bottom {
+  width: 30rem;
+  max-width: 100%;
+  box-shadow: 0 .2rem .5rem var(--white);
+}
+
+.text-bottom {
+  color: var(--smoke);
+  text-align: justify;
+  text-align-last: right;
+  padding: 2rem;
+}
+
+.text-bottom h1 {
+  color: var(--golden);
+}
+
+/* ===================
+    Responsive Design
+   =================== */
+@media screen and (max-width: 1100px) {
+  .content-top {
+    display: block;
+  }
+
+  .text-top {
+    padding: 2rem 0;
+  }
+
+  .content-bottom {
+    display: block;
+  }
+
+  .text-bottom {
+    padding: 2rem 0;
+    text-align-last: auto;
+  }
+}

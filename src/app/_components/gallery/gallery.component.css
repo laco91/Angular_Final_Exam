@@ -23,4 +23,10 @@
   height: 180px;
   filter: var(--shadow);
   border-radius: 5px;
+  filter: blur(5px);
+}
+
+.gallery-container img:hover {
+  cursor: pointer;
+  filter: blur(0);
 }

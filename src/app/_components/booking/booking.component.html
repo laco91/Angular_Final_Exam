@@ -1,7 +1,21 @@
 <main class="booking-wrapper">
   <div class="booking-container">
-    <form class="booking-info">
-      <section class="booking-pickers">
+    <section class="booking-info">
+      <div class="booking-opening-hour">
+        <h2>Opening Hour</h2>
+        <ul>
+          <li>Monday - Friday</li>
+          <li>11:00 AM - 11:00 PM</li>
+          <li>Saturday</li>
+          <li>11:00 AM - 12:00 PM</li>
+          <li>Sunday</li>
+          <li>12:00 AM - 10:00 PM</li>
+        </ul>
+      </div>
+      <img class="booking-img" src="assets/imgs/booking.jpg" alt="booking">
+    </section>
+    <form class="booking-form">
+      <div class="booking-picker-container">
         <i class="fa-regular fa-user">
           <select class="personpicker" name="personpicker">
             <option value="1">1 person</option>
@@ -34,20 +48,10 @@
             <option value="15:30">3:30 PM</option>
           </select>
         </i>
-      </section>
-      <button class="booking-btn" type="submit">Book a table</button>
-      <section class="booking-opening-hour">
-        <h2>Opening Hour</h2>
-        <ul>
-          <li>Monday - Friday</li>
-          <li>11:00 AM - 11:00 PM</li>
-          <li>Saturday</li>
-          <li>11:00 AM - 12:00 PM</li>
-          <li>Sunday</li>
-          <li>12:00 AM - 10:00 PM</li>
-        </ul>
-      </section>
+      </div>
+      <button class="booking-btn" type="submit">
+        Book a table
+      </button>
     </form>
-    <img class="booking-img" src="assets/imgs/booking.jpg" alt="booking">
   </div>
 </main>

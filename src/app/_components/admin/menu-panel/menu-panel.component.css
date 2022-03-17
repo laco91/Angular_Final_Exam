@@ -60,6 +60,9 @@
   margin-top: 1rem;
 }
 
+/* =======
+    Modal
+   ======= */
 .new-product-datas {
   display: flex;
   flex-direction: column;
@@ -68,4 +71,42 @@
 
 .new-product-datas label {
   margin-bottom: .3rem;
+  width: 100%
+}
+
+.new-product-datas label input {
+  width: 100%;
+}
+
+/* ===================
+    Responsive Design
+   =================== */
+@media screen and (max-width: 1000px) {
+  .menu-panel-item, .new-product-btn {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .menu-panel-wrapper {
+    padding: 3rem 1rem;
+  }
+
+  .menu-panel-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .menu-panel-product {
+    width: auto;
+    display: grid;
+  }
+
+  .menu-panel-product {
+    padding-bottom: .5rem;
+  }
+
+  .btn-group {
+    margin-top: 1rem;
+  }
 }

@@ -1,6 +1,6 @@
 <main class="menu-wrapper">
   <!-- Drinks -->
-  <section>
+  <section class="menu-drink">
     <div class="menu-list">
       <div class="menu-item" *ngFor="let drink of drinks">
         <span>{{ drink.name }}</span>
@@ -13,7 +13,7 @@
     </div>
   </section>
   <!-- Main Dishes -->
-  <section>
+  <section class="menu-mainDish">
     <div class="menu-list">
       <div class="menu-item" *ngFor="let mainDish of mainDishes">
         <span>{{ mainDish.name }}</span>
@@ -22,11 +22,11 @@
       <div class="menu-title">
         <h2>Main Dishes</h2>
       </div>
-      <img class="menu-img-maindish" src="assets/imgs/maindish.png" alt="maindish">
+      <img class="menu-img-mainDish" src="assets/imgs/maindish.png" alt="mainDish">
     </div>
   </section>
   <!-- Sushi -->
-  <section>
+  <section class="menu-sushi">
     <div class="menu-list">
       <div class="menu-item" *ngFor="let sushi of sushi">
         <span>{{ sushi.name }}</span>
@@ -39,7 +39,7 @@
     </div>
   </section>
   <!-- Desserts -->
-  <section>
+  <section class="menu-dessert">
     <div class="menu-list">
       <div class="menu-item" *ngFor="let dessert of desserts">
         <span>{{ dessert.name }}</span>

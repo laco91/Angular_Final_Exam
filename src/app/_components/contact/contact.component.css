@@ -9,6 +9,7 @@
   background-size: cover;
   background-position: center;
 }
+
 .contact-container {
   display: flex;
   align-items: center;
@@ -19,8 +20,7 @@
   z-index: 1;
 }
 
-/* Contact Info */
-.contact-info {
+.contact-details {
   position: absolute;
   height: calc(100% - 5rem);
   width: 20rem;
@@ -31,11 +31,6 @@
   flex-direction: column;
   justify-content: space-between;
   z-index: 1;
-}
-
-.contact-info h2 {
-  color: var(--smoke);
-  font-weight: 500;
 }
 
 .info li {
@@ -51,12 +46,12 @@
   width: 3rem;
 }
 
-.info li span:nth-child(1) i {
+.info li span i {
   font-size: 1.5rem;
   color: var(--smoke);
 }
 
-.info li span:nth-child(2) {
+.info li span {
   color: var(--smoke);
 }
 
@@ -75,7 +70,10 @@
   font-size: 2rem;
 }
 
-/* Contact Form */
+.contact-wrapper {
+  width: auto;
+}
+
 .contact-form {
   position: absolute;
   background: var(--smoke);
@@ -83,7 +81,7 @@
   height: 100%;
   width: calc(100% - 8rem);
   margin-left: 8rem;
-  padding: 2.5rem 2.5rem 2.5rem 15rem;
+  padding: 1.5rem 1.5rem 1.5rem 14rem;
 }
 
 .contact-form h2 {
@@ -91,8 +89,8 @@
   font-weight: 500;
 }
 
-.contact-form input {
-  width: 12rem;
+.contact-adress label {
+  margin-right: 3rem;
 }
 
 .send-btn {
@@ -102,4 +100,66 @@
   border-radius: .3rem;
   padding: .5rem 2rem;
   box-shadow: 0 .2rem .5rem var(--black);
+}
+
+/* ===================
+    Responsive Design
+   =================== */
+@media screen and (max-width: 920px) {
+  .contact-container {
+    height: 100vh;
+    margin: 0;
+    display: block;
+  }
+
+  .contact-details {
+    position: relative;
+    height: auto;
+    width: 100%;
+    padding: 1.5rem 0;
+  }
+
+  .info, .media {
+    justify-content: center;
+  }
+
+  .info {
+    display: flex;
+  }
+
+  .info li {
+    margin: 1.5rem;
+  }
+
+  .info, .media {
+    padding: 0;
+  }
+
+  .contact-form {
+    position: relative;
+    height: auto;
+    width: 100%;
+    margin: 0;
+    padding: 5rem 1.5rem;
+  }
+}
+
+@media screen and (max-width: 710px) {
+
+  .contact-form input {
+    width: 100%;
+  }
+
+  .contact-adress {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .contact-adress label {
+    margin: 0;
+  }
+
+  .info {
+    display: grid;
+  }
 }

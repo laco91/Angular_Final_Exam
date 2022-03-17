@@ -4,7 +4,8 @@
   width: 5rem;
   background: var(--coal);
   filter: var(--shadow);
-  transition: all 0.3s ease;
+  transition: .3s ease;
+  z-index: 2;
 }
 
 .sidenav-collapsed {
@@ -43,7 +44,6 @@
   text-decoration: none;
   color: var(--smoke);
   border-radius: .25rem;
-  transition: all .15s ease;
 }
 
 .sidenav-link:hover {
@@ -66,4 +66,6 @@
 .sidenav-link-text {
   margin-left: 1.5rem;
   font-size: 1.2rem;
+  /* opacity: 0;
+  transition: opacity 3s linear;     // Valamiért az opacity-t nem tudja értelmezni */  
 }

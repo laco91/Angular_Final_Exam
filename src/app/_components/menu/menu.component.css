@@ -1,34 +1,29 @@
-h2 {
-  margin: 0;
-  padding: 10px 60px 10px 10px;
-  letter-spacing: 3px;
-  filter: var(--shadow);
-}
-
 .menu-wrapper {
-  display: flex;
-  height: 100vh;
-  scroll-snap-type: x mandatory;
-  overflow-x: scroll;
+  min-height: 100vh;
   background: url('^assets/imgs/menubg.jpg');
   background-size: cover;
   background-position: center;
+  background-attachment: fixed;
 }
 
-section {
+.menu-drink,
+.menu-mainDish,
+.menu-sushi,
+.menu-dessert {
   display: flex;
-  padding-top: 15vh;
-  padding-bottom: 10vh;
-  min-width: 100vw;
+  padding-bottom: 14vh;
   justify-content: center;
-  scroll-snap-align: start;
+  background: inherit;
+}
+
+.menu-drink {
+  padding-top: 22vh;
 }
 
 .menu-list {
-  position: relative;
-  min-height: 70vh;
-  width: 75vw;
-  padding: 30px;
+  min-height: 75vh;
+  width: 60rem;
+  padding: 5rem 1.6rem;
   background: var(--black);
   color: var(--smoke);
   filter: var(--shadow);
@@ -46,45 +41,61 @@ section {
 
 .menu-title {
   position: absolute;
-  bottom: -25px;
-  right: 30px;
+  width: 20rem;
+  max-width: 100%;
+  top: -25px;
+  left: 0;
   background: var(--red);
-  transform: skewX(-20deg);
+  text-align: center;
+  padding: .5rem 0;
+}
+
+.menu-title h2 {
+  margin: 0;
+  letter-spacing: 3px;
+  filter: var(--shadow);
+  font-weight: 700;
 }
 
 .menu-img-drink {
-  right: -30px;
+  right: 10px;
   bottom: -50px;
-}
-
-.menu-img-maindish {
-  right: -100px;
-  bottom: -60px;
-}
-
-.menu-img-sushi {
-  right: -130px;
-  bottom: -70px;
-}
-
-.menu-img-dessert {
-  right: -100px;
-  bottom: -80px;
-}
-
-.menu-img-drink,
-.menu-img-maindish,
-.menu-img-sushi,
-.menu-img-dessert {
   position: absolute;
 }
 
-/* Hide scrollbar */
-*::-webkit-scrollbar {  /* Chrome, Safari and Opera */
-  display: none;
-  background: transparent;
+.menu-img-mainDish {
+  right: 10px;
+  bottom: -60px;
+  position: absolute;
 }
-* {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
+
+.menu-img-sushi {
+  right: 0;
+  bottom: -70px;
+  position: absolute;
+}
+
+.menu-img-dessert {
+  right: 0;
+  bottom: -80px;
+  position: absolute;
+}
+
+/* ===================
+    Responsive Design
+   =================== */
+@media screen and (max-width: 900px) {
+  .menu-item {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .menu-item {
+    width: 100%;
+  }
+
+  .menu-list img {
+    display: none;
+  }
 }

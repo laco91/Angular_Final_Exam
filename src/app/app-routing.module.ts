@@ -2,11 +2,13 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { BookingComponent, HomeComponent, ContactComponent,
          GalleryComponent, MenuComponent, DashboardComponent,
-         MenuPanelComponent, GalleryPanelComponent} from './_components/component_collector';
+         MenuPanelComponent, GalleryPanelComponent, AboutComponent}
+         from './_components/component_collector';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
+  { path: 'about', component: AboutComponent },
   { path: 'menu', component: MenuComponent },
   { path: 'gallery', component: GalleryComponent },
   { path: 'booking', component: BookingComponent },
