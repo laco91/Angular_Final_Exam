@@ -1,6 +1,6 @@
-<div class="navbar-wrapper">
+<div class="navbar-wrapper" *ngIf="visibility.navbarVisible">
   <input class="navbar-toggle" id="navbar-toggle" type="checkbox">
-  <nav class="navbar-container" *ngIf="visibility.navbarVisible">
+  <nav class="navbar-container">
     <img class="navbar-logo" src="assets/imgs/logo.png" alt="logo">
     <a class="navbar-link" routerLink="/home">
       Ho<span>m</span>e
@@ -20,6 +20,9 @@
     <a class="navbar-link" routerLink="/contact" routerLinkActive="active">
       C<span>o</span>ntact
     </a>
+    <a class="navbar-login" routerLink="/login" routerLinkActive="active">
+      Login
+    </a>
   </nav>
   <!-- Navbar Collapse Button -->
   <label for="navbar-toggle" class="navbar-toggle-btn">
@@ -28,7 +31,7 @@
 </div>
 
 <!-- Temporary button, it will be replace with login/register -->
-<div style="position: absolute; right: 0; top: 20px; margin-right: 20px; z-index: 2;">
+<div style="position: absolute; right: 0; bottom: 20px; margin-right: 20px; z-index: 2;">
   <button class="btn" (click)="navigateTo()"
   [ngClass]="isClicked ? 'btn-danger' : 'btn-primary'">
   {{ isClicked ? 'AdmOut' : 'AdmIn'}}

@@ -54,7 +54,7 @@
   margin: 0;
   letter-spacing: 3px;
   filter: var(--shadow);
-  font-weight: 700;
+  font-weight: bold;
 }
 
 .menu-img-drink {

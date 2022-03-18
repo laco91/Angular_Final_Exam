@@ -1,7 +1,9 @@
 <main class="menu-panel-wrapper">
   <nav ngbNav #nav="ngbNav" class="nav-tabs">
+    <!----------------- 
+    =====  DRINKS =====
+    ------------------>
     <li ngbNavItem>
-      <!-- Drinks Panel -->
       <a ngbNavLink>Drinks</a>
       <ng-template ngbNavContent>
         <div class="menu-panel-container">
@@ -13,8 +15,8 @@
             </div>
             <!-- Edit and Delete Button -->
             <div class="btn-group">
-              <button type="button" class="btn btn-warning" (click)="editProduct(drink)"
-              data-bs-toggle="modal" data-bs-target="#product-modal">
+              <button type="button" class="btn btn-warning" (click)="editProduct(drink)" data-bs-toggle="modal"
+                data-bs-target="#product-modal">
                 Edit
               </button>
               <button type="button" class="btn btn-danger" (click)="deleteThisDrink(drink)">
@@ -22,43 +24,36 @@
               </button>
             </div>
           </div>
-          <!-- New Product Button -->
-          <div class="new-product-container">
-            <button class="btn btn-primary new-product-btn"
-            data-bs-toggle="modal" data-bs-target="#product-modal"
-            (click)="addNewProduct()">
-              <i class="fa-solid fa-plus"></i> Add New Product
-            </button>
-          </div> 
           <!-- Add/Edit Modal -->
-          <div class="modal fade" id="product-modal" tabindex="-1" data-bs-backdrop="static" aria-labelledby="addNewSupply" aria-hidden="true">
+          <div class="modal fade" id="product-modal" tabindex="-1" data-bs-backdrop="static"
+            aria-labelledby="addNewSupply" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">
               <div class="modal-content">
                 <div class="modal-header">
                   <h5 class="modal-title">{{ modalTitleSwap }}</h5>
                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>                
+                </div>
                 <div class="modal-body d-flex justify-content-center">
-                  <form [formGroup]="productForm" >
+                  <form [formGroup]="productForm">
                     <div class="new-product-datas">
-                      <label> Name: 
+                      <label> Name:
                         <input type="text" formControlName="name" placeholder="Enter the product name">
                       </label>
-                      <label> Price: 
+                      <label> Price:
                         <input type="text" formControlName="price" placeholder="Enter the price ($)">
                       </label>
                     </div>
                   </form>
                 </div>
                 <div class="modal-footer">
-                  <button type="button" class="btn btn-success" data-bs-dismiss="modal"
-                  *ngIf="modalBtnSwap" (click)="updateThisDrink()"
-                  [disabled]="!productForm.valid">
+                  <!-- Edit Product Button -->
+                  <button type="button" class="btn btn-success" data-bs-dismiss="modal" *ngIf="modalBtnSwap"
+                    (click)="updateThisDrink()" [disabled]="!productForm.valid">
                     Update
                   </button>
-                  <button type="submit" class="btn btn-success"
-                  *ngIf="!modalBtnSwap" (click)="addNewDrink()"
-                  [disabled]="!productForm.valid">
+                  <!-- Add New Product Button -->
+                  <button type="submit" class="btn btn-success" *ngIf="!modalBtnSwap" (click)="addNewDrink()"
+                    [disabled]="!productForm.valid">
                     Save
                   </button>
                 </div>
@@ -68,24 +63,202 @@
         </div>
       </ng-template>
     </li>
+    <!---------------------- 
+    =====  MAIN DISHES =====
+    ----------------------->
     <li ngbNavItem>
-      <!-- Main Dishes Panel -->
       <a ngbNavLink>Main Dishes</a>
       <ng-template ngbNavContent>
+        <div class="menu-panel-container">
+          <div class="menu-panel-item" *ngFor="let mainDish of mainDishes">
+            <!-- Product Details -->
+            <div class="menu-panel-product">
+              <span>{{ mainDish.name }}</span>
+              <span>{{ mainDish.price | currency }}</span>
+            </div>
+            <!-- Edit and Delete Button -->
+            <div class="btn-group">
+              <button type="button" class="btn btn-warning" (click)="editProduct(mainDish)" data-bs-toggle="modal"
+                data-bs-target="#product-modal">
+                Edit
+              </button>
+              <button type="button" class="btn btn-danger" (click)="deleteThisMainDish(mainDish)">
+                Delete
+              </button>
+            </div>
+          </div>
+          <!-- Add/Edit Modal -->
+          <div class="modal fade" id="product-modal" tabindex="-1" data-bs-backdrop="static"
+            aria-labelledby="addNewSupply" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">{{ modalTitleSwap }}</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body d-flex justify-content-center">
+                  <form [formGroup]="productForm">
+                    <div class="new-product-datas">
+                      <label> Name:
+                        <input type="text" formControlName="name" placeholder="Enter the product name">
+                      </label>
+                      <label> Price:
+                        <input type="text" formControlName="price" placeholder="Enter the price ($)">
+                      </label>
+                    </div>
+                  </form>
+                </div>
+                <div class="modal-footer">
+                  <!-- Edit Product Button -->
+                  <button type="button" class="btn btn-success" data-bs-dismiss="modal" *ngIf="modalBtnSwap"
+                    (click)="updateThisMainDish()" [disabled]="!productForm.valid">
+                    Update
+                  </button>
+                  <!-- Add New Product Button -->
+                  <button type="submit" class="btn btn-success" *ngIf="!modalBtnSwap" (click)="addNewMainDish()"
+                    [disabled]="!productForm.valid">
+                    Save
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </ng-template>
     </li>
+    <!---------------- 
+    =====  SUSHI =====
+    ----------------->
     <li ngbNavItem>
-      <!-- Sushi Panel -->
       <a ngbNavLink>Sushi</a>
       <ng-template ngbNavContent>
+        <div class="menu-panel-container">
+          <div class="menu-panel-item" *ngFor="let sushi of sushi">
+            <!-- Product Details -->
+            <div class="menu-panel-product">
+              <span>{{ sushi.name }}</span>
+              <span>{{ sushi.price | currency }}</span>
+            </div>
+            <!-- Edit and Delete Button -->
+            <div class="btn-group">
+              <button type="button" class="btn btn-warning" (click)="editProduct(sushi)" data-bs-toggle="modal"
+                data-bs-target="#product-modal">
+                Edit
+              </button>
+              <button type="button" class="btn btn-danger" (click)="deleteThisSushi(sushi)">
+                Delete
+              </button>
+            </div>
+          </div>
+          <!-- Add/Edit Modal -->
+          <div class="modal fade" id="product-modal" tabindex="-1" data-bs-backdrop="static"
+            aria-labelledby="addNewSupply" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">{{ modalTitleSwap }}</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body d-flex justify-content-center">
+                  <form [formGroup]="productForm">
+                    <div class="new-product-datas">
+                      <label> Name:
+                        <input type="text" formControlName="name" placeholder="Enter the product name">
+                      </label>
+                      <label> Price:
+                        <input type="text" formControlName="price" placeholder="Enter the price ($)">
+                      </label>
+                    </div>
+                  </form>
+                </div>
+                <div class="modal-footer">
+                  <!-- Edit Product Button -->
+                  <button type="button" class="btn btn-success" data-bs-dismiss="modal" *ngIf="modalBtnSwap"
+                    (click)="updateThisSushi()" [disabled]="!productForm.valid">
+                    Update
+                  </button>
+                  <!-- Add New Product Button -->
+                  <button type="submit" class="btn btn-success" *ngIf="!modalBtnSwap" (click)="addNewSushi()"
+                    [disabled]="!productForm.valid">
+                    Save
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </ng-template>
     </li>
+    <!------------------- 
+    =====  DESSERTS =====
+    -------------------->
     <li ngbNavItem>
-      <!-- Desserts Panel -->
       <a ngbNavLink>Desserts</a>
       <ng-template ngbNavContent>
+        <div class="menu-panel-container">
+          <div class="menu-panel-item" *ngFor="let dessert of desserts">
+            <!-- Product Details -->
+            <div class="menu-panel-product">
+              <span>{{ dessert.name }}</span>
+              <span>{{ dessert.price | currency }}</span>
+            </div>
+            <!-- Edit and Delete Button -->
+            <div class="btn-group">
+              <button type="button" class="btn btn-warning" (click)="editProduct(dessert)" data-bs-toggle="modal"
+                data-bs-target="#product-modal">
+                Edit
+              </button>
+              <button type="button" class="btn btn-danger" (click)="deleteThisDessert(dessert)">
+                Delete
+              </button>
+            </div>
+          </div>
+          <!-- Add/Edit Modal -->
+          <div class="modal fade" id="product-modal" tabindex="-1" data-bs-backdrop="static"
+            aria-labelledby="addNewSupply" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">{{ modalTitleSwap }}</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body d-flex justify-content-center">
+                  <form [formGroup]="productForm">
+                    <div class="new-product-datas">
+                      <label> Name:
+                        <input type="text" formControlName="name" placeholder="Enter the product name">
+                      </label>
+                      <label> Price:
+                        <input type="text" formControlName="price" placeholder="Enter the price ($)">
+                      </label>
+                    </div>
+                  </form>
+                </div>
+                <div class="modal-footer">
+                  <!-- Edit Product Button -->
+                  <button type="button" class="btn btn-success" data-bs-dismiss="modal" *ngIf="modalBtnSwap"
+                    (click)="updateThisDessert()" [disabled]="!productForm.valid">
+                    Update
+                  </button>
+                  <!-- Add New Product Button -->
+                  <button type="submit" class="btn btn-success" *ngIf="!modalBtnSwap" (click)="addNewDessert()"
+                    [disabled]="!productForm.valid">
+                    Save
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </ng-template>
     </li>
   </nav>
   <div [ngbNavOutlet]="nav"></div>
+  <!-- New Product Button -->
+  <div class="new-product-container">
+    <button class="btn btn-primary new-product-btn" data-bs-toggle="modal" data-bs-target="#product-modal"
+      (click)="addNewProduct()">
+      <i class="fa-solid fa-plus"></i> Add New Product
+    </button>
+  </div>
 </main>

@@ -5,6 +5,7 @@
   padding: 3rem;
   background: var(--smoke);
   overflow: auto;
+  z-index: 10;
 }
 
 .menu-panel-container {

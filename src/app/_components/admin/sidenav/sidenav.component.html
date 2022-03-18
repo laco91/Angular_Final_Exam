@@ -29,5 +29,21 @@
         </div>
       </a>
     </div>
+    <div class="sidenav-item">
+      <a class="sidenav-link" routerLink="admin/user" routerLinkActive="active">
+        <i class="sidenav-link-icon fa-regular fa-user"></i>
+        <div class="sidenav-link-text" *ngIf="collapsed">
+          Users
+        </div>
+      </a>
+    </div>
+    <div class="sidenav-item">
+      <a class="sidenav-link" routerLink="">
+        <i class="sidenav-link-icon fa-solid fa-arrow-right-from-bracket"></i>
+        <div class="sidenav-link-text" *ngIf="collapsed">
+          Logout
+        </div>
+      </a>
+    </div>
   </nav>
 </aside>

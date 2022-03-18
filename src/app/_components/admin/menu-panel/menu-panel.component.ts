@@ -38,7 +38,9 @@ export class MenuPanelComponent implements OnInit {
     this.createProductForm();
   }
 
-  // Get Datas
+  //============
+  // GET DATAS
+  //============
   getDrinks(): void {
     this.menuService.getAllDrinks()
       .subscribe(data => this.drinks = data);
@@ -67,7 +69,9 @@ export class MenuPanelComponent implements OnInit {
     });
   }
 
-  // Add New Product
+  //=================
+  // ADD NEW PRODUCT
+  //=================
   addNewDrink() {
     let obj: Menu = {
       name: this.productForm.value.name,
@@ -129,7 +133,9 @@ export class MenuPanelComponent implements OnInit {
     this.productForm.reset();
   }
 
-  // Update Product
+  //================
+  // UPDATE PRODUCT
+  //================
   updateThisDrink() {
     let obj: Menu = {
       name: this.productForm.value.name,
@@ -142,11 +148,67 @@ export class MenuPanelComponent implements OnInit {
     
   }
 
-  // Delete Product
+  updateThisMainDish() {
+    let obj: Menu = {
+      name: this.productForm.value.name,
+      price: this.productForm.value.price
+    }
+    console.log(this.objIdToEdit);
+    this.menuService.updateMainDish(obj, this.objIdToEdit).subscribe(() => {
+      this.getMainDishes();
+    });
+    
+  }
+
+  updateThisSushi() {
+    let obj: Menu = {
+      name: this.productForm.value.name,
+      price: this.productForm.value.price
+    }
+    console.log(this.objIdToEdit);
+    this.menuService.updateSushi(obj, this.objIdToEdit).subscribe(() => {
+      this.getSushi();
+    });
+    
+  }
+
+  updateThisDessert() {
+    let obj: Menu = {
+      name: this.productForm.value.name,
+      price: this.productForm.value.price
+    }
+    console.log(this.objIdToEdit);
+    this.menuService.updateDessert(obj, this.objIdToEdit).subscribe(() => {
+      this.getDesserts();
+    });
+    
+  }
+
+  //================
+  // DELETE PRODUCT
+  //================
   deleteThisDrink(data: any): void  {
     confirm('Are you sure?') ?
     this.menuService.deleteDrink(data.id).subscribe(() => 
       this.getDrinks()) : '';
+  }
+
+  deleteThisMainDish(data: any): void  {
+    confirm('Are you sure?') ?
+    this.menuService.deleteMainDish(data.id).subscribe(() => 
+      this.getMainDishes()) : '';
+  }
+
+  deleteThisSushi(data: any): void  {
+    confirm('Are you sure?') ?
+    this.menuService.deleteSushi(data.id).subscribe(() => 
+      this.getSushi()) : '';
+  }
+
+  deleteThisDessert(data: any): void  {
+    confirm('Are you sure?') ?
+    this.menuService.deleteDessert(data.id).subscribe(() => 
+      this.getDesserts()) : '';
   }
 
 }
