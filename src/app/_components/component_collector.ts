@@ -9,3 +9,5 @@ export { DashboardComponent } from "./admin/dashboard/dashboard.component";
 export { MenuPanelComponent } from "./admin/menu-panel/menu-panel.component";
 export { GalleryPanelComponent } from "./admin/gallery-panel/gallery-panel.component";
 export { AboutComponent } from "./about/about.component";
+export { LoginComponent } from "./account/login/login.component"
+export { RegisterComponent } from "./account/register/register.component";

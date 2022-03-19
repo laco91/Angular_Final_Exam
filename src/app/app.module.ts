@@ -17,7 +17,8 @@ import { BookingComponent, ContactComponent,
          NavbarComponent, HomeComponent,
          DashboardComponent, GalleryPanelComponent,
          MenuPanelComponent, SidenavComponent,
-         AboutComponent} from './_components/component_collector';
+         AboutComponent, LoginComponent,
+         RegisterComponent} from './_components/component_collector';
    
          
 @NgModule({
@@ -33,7 +34,9 @@ import { BookingComponent, ContactComponent,
     GalleryPanelComponent,
     DashboardComponent,
     SidenavComponent,
-    AboutComponent
+    AboutComponent,
+    LoginComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
