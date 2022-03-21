@@ -2,7 +2,8 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { BookingComponent, HomeComponent, ContactComponent,
          GalleryComponent, MenuComponent, DashboardComponent,
-         MenuPanelComponent, GalleryPanelComponent, AboutComponent, LoginComponent, RegisterComponent}
+         MenuPanelComponent, GalleryPanelComponent, AboutComponent,
+         LoginComponent, RegisterComponent, ProfileComponent}
          from './_components/component_collector';
 
 const routes: Routes = [
@@ -15,6 +16,7 @@ const routes: Routes = [
   { path: 'contact', component: ContactComponent },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
+  { path: 'profile', component: ProfileComponent },
   { path: 'admin/dashboard', component: DashboardComponent },
   { path: 'admin/menu-panel', component: MenuPanelComponent },
   { path: 'admin/gallery-panel', component: GalleryPanelComponent }

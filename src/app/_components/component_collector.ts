@@ -11,3 +11,4 @@ export { GalleryPanelComponent } from "./admin/gallery-panel/gallery-panel.compo
 export { AboutComponent } from "./about/about.component";
 export { LoginComponent } from "./account/login/login.component"
 export { RegisterComponent } from "./account/register/register.component";
+export { ProfileComponent } from "./account/profile/profile.component";

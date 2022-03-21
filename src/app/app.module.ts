@@ -19,6 +19,7 @@ import { BookingComponent, ContactComponent,
          MenuPanelComponent, SidenavComponent,
          AboutComponent, LoginComponent,
          RegisterComponent} from './_components/component_collector';
+import { ProfileComponent } from './_components/account/profile/profile.component';
    
          
 @NgModule({
@@ -36,7 +37,8 @@ import { BookingComponent, ContactComponent,
     SidenavComponent,
     AboutComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,

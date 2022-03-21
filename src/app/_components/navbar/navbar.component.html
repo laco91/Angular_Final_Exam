@@ -28,11 +28,21 @@
     <div class="dropdown" *ngIf="this.authService.isLoggedIn()">
       <i class="fa-regular fa-circle-user" data-bs-toggle="dropdown"></i>
       <ul class="dropdown-menu">
-        <li class="ps-3">Hello, {{ this.authService.user.firstName }}!</li>
+        <li class="ps-3">
+          Hello, {{ this.authService.user.firstName }}!
+        </li>
         <li><hr class="dropdown-divider"></li>
-        <li><a class="dropdown-item">Profile</a></li>
-        <li *ngIf="this.authService.user.access === 'admin'"><a class="dropdown-item" routerLink="/admin/dashboard">Admin Panel</a></li>
-        <li><button class="dropdown-item" (click)="this.logout()">Logout<i class="sidenav-link-icon fa-solid fa-arrow-right-from-bracket ms-2"></i></button></li>
+        <li>
+          <a class="dropdown-item" routerLink="/profile">Profile</a>
+        </li>
+        <li *ngIf="this.authService.user.access === 'admin'">
+          <a class="dropdown-item" routerLink="/admin/dashboard">Admin Panel</a>
+        </li>
+        <li>
+          <button class="dropdown-item" (click)="this.logout()">
+            <i class="sidenav-link-icon fa-solid fa-arrow-right-from-bracket"></i>Logout
+          </button>
+        </li>
       </ul>
     </div>
   </nav>
