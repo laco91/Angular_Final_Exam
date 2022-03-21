@@ -11,7 +11,7 @@
   display: flex;
   align-items: center;
   width: 100%;
-  padding: 0 3rem;
+  margin: 0 3rem;
 }
 
 .navbar-link {
@@ -39,7 +39,7 @@
 }
 
 .navbar-login {
-  padding: 10px;
+  padding: 10px 30px 10px 10px;
   font-size: 1.7em;
   font-weight: bold;
   text-decoration: none;
@@ -47,6 +47,22 @@
   color: var(--white);
   filter: var(--shadow);
   margin-left: auto;
+  position: relative;
+}
+
+.dropdown {
+  font-size: 2rem;
+  margin-left: auto;
+  color: var(--white);
+  filter: var(--shadow);
+}
+
+.dropdown i {
+  padding: .5rem;
+}
+
+.dropdown-menu {
+  background: var(--timberwolf);
 }
 
 /* ========================
@@ -94,6 +110,7 @@
     height: 100vh;
     width: 14rem;
     padding: 1rem;
+    margin: 0;
     box-shadow: 0 .2rem .5rem var(--black);
   }
 
@@ -101,8 +118,12 @@
     opacity: 0;
   }
 
-  .navbar-login {
+  .navbar-login, .dropdown {
     margin-left: 0;
     margin-top: auto;
+  }
+
+  .navbar-dropdown {
+    inset: auto auto 0 50px;
   }
 }

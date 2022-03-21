@@ -528,5 +528,25 @@
       "imgSrc": "gallery_img30.jpg",
       "imgAlt": "gallery image"
     }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "token": "",
+      "access": "admin",
+      "firstName": "Laszlo",
+      "lastName": "Tancsa",
+      "email": "admin@maneko.com",
+      "password": "admin"
+    },
+    {
+      "id": 2,
+      "token": "",
+      "access": "user",
+      "firstName": "John",
+      "lastName": "Wick",
+      "email": "user@maneko.com",
+      "password": "user"
+    }
   ]
 }

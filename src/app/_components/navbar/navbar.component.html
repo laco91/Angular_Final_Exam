@@ -20,20 +20,24 @@
     <a class="navbar-link" routerLink="/contact" routerLinkActive="active">
       C<span>o</span>ntact
     </a>
-    <a class="navbar-login" routerLink="/login" routerLinkActive="active">
+    <a class="navbar-login" *ngIf="!this.authService.isLoggedIn()"
+    routerLink="/login" routerLinkActive="active">
       Log<span>in</span>
     </a>
+    <!-- User interface after logged in -->
+    <div class="dropdown" *ngIf="this.authService.isLoggedIn()">
+      <i class="fa-regular fa-circle-user" data-bs-toggle="dropdown"></i>
+      <ul class="dropdown-menu">
+        <li class="ps-3">Hello, {{ this.authService.user.firstName }}!</li>
+        <li><hr class="dropdown-divider"></li>
+        <li><a class="dropdown-item">Profile</a></li>
+        <li *ngIf="this.authService.user.access === 'admin'"><a class="dropdown-item" routerLink="/admin/dashboard">Admin Panel</a></li>
+        <li><button class="dropdown-item" (click)="this.logout()">Logout<i class="sidenav-link-icon fa-solid fa-arrow-right-from-bracket ms-2"></i></button></li>
+      </ul>
+    </div>
   </nav>
   <!-- Navbar Collapse Button -->
   <label for="navbar-toggle" class="navbar-toggle-btn">
     <i class="fa-solid fa-bars"></i>
   </label>
-</div>
-
-<!-- Temporary button, it will be replace with login/register -->
-<div style="position: absolute; right: 0; bottom: 20px; margin-right: 20px; z-index: 2;">
-  <button class="btn" (click)="navigateTo()"
-  [ngClass]="isClicked ? 'btn-danger' : 'btn-primary'">
-  {{ isClicked ? 'AdmOut' : 'AdmIn'}}
-  </button>
 </div>

@@ -1,7 +1,7 @@
-import { Location } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { VisibilityService } from 'src/app/_services/service_collector';
+import { User } from 'src/app/_models/model_collector';
+import { AuthService, VisibilityService } from 'src/app/_services/service_collector';
 
 @Component({
   selector: 'app-navbar',
@@ -10,22 +10,22 @@ import { VisibilityService } from 'src/app/_services/service_collector';
 })
 export class NavbarComponent implements OnInit {
 
-  isClicked!: boolean;
+  user!: User;
 
   constructor(public visibility: VisibilityService,
-              private router: Router,
-              private location: Location) { }
+              public authService: AuthService,
+              private router: Router) { }
 
   ngOnInit(): void {
+    this.user = JSON.parse(localStorage.getItem('user')!);
+    this.authService.getUserFirstName();
   }
 
-  // Navigation between admin site and previous page
-  navigateTo() {
-    this.isClicked = !this.isClicked;
-    if (this.isClicked){
-      this.router.navigate(['/admin/dashboard']);
-    } else {
-      this.router.navigate(['/']);
-    }
+  logout() {
+      this.user.token = '';
+      localStorage.setItem('user', JSON.stringify(this.user));
+      this.router.navigate(['/home']);
+      console.log('Logged out: ' + this.user.firstName + ' ' + JSON.stringify(this.user));
   }
+
 }

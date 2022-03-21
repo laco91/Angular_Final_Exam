@@ -1,9 +1,11 @@
 <main class="login-wrapper">
-  <form class="login-container">
+  <form class="login-container" (ngSubmit)="onLogin()">
     <img class="login-logo" src="assets/imgs/logo.png" routerLink="/home" alt="logo">
-    <input class="login-input" type="email" placeholder="Email" required>
-    <input class="login-input" type="password" placeholder="Password" required>
-    <button class="login-btn btn btn-primary">Login</button>
+    <input class="login-input" type="email" placeholder="Email" required
+    [(ngModel)]="this.email" name="email">
+    <input class="login-input" type="password" placeholder="Password" required
+    [(ngModel)]="this.password" name="password">
+    <button class="login-btn btn btn-primary" type="submit">Login</button>
     <p>Don't have an account? <a routerLink="/register">Register</a></p>
   </form>
 </main>
