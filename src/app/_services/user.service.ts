@@ -1,5 +1,6 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { catchError, tap } from 'rxjs/operators';
 import { environment } from 'src/environments/environment';
 import { User } from '../_models/user';
 
@@ -16,5 +17,13 @@ export class UserService {
 
   getAllUsers() {
     return this.http.get<User[]>(`${environment.jsonUrl}/users`, httpOption);
+  }
+
+  addUser(user: User) {
+    return this.http.post<User>(`${environment.jsonUrl}/users`, user, httpOption)
+    .pipe(
+      tap(user => console.log(`New user = ${JSON.stringify(user)}`)),
+      catchError(error => error)
+    );
   }
 }

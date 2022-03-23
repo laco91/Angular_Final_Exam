@@ -1,5 +1,5 @@
 export interface User {
-    id: number;
+    id?: number;
     token: string;
     access: string;
     firstName: string;

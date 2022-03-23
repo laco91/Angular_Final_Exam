@@ -1,12 +1,17 @@
 <main class="login-wrapper">
-  <form class="login-container">
+  <form (ngSubmit)="onRegister()" class="login-container" #registerForm="ngForm">
     <img class="login-logo" src="assets/imgs/logo.png" routerLink="/home" alt="logo">
-    <input class="login-input" type="text" placeholder="First Name" required>
-    <input class="login-input" type="text" placeholder="Last Name" required>
-    <input class="login-input" type="email" placeholder="Email" required>
-    <input class="login-input" type="password" placeholder="Password" required>
-    <input class="login-input" type="password" placeholder="Confirm Password" required>
-    <button class="login-btn btn btn-primary">Register</button>
+    <input class="login-input" type="text"
+      [(ngModel)]="this.firstName" name="firstName" placeholder="First Name" required>
+    <input class="login-input" type="text"
+      [(ngModel)]="this.lastName" name="lastName" placeholder="Last Name" required>
+    <input class="login-input" type="email"
+      [(ngModel)]="this.email" name="email" placeholder="Email" required>
+    <input class="login-input" type="password"
+      [(ngModel)]="this.password1" name="password1" placeholder="Password" required>
+    <input class="login-input" type="password"
+      [(ngModel)]="this.password2" name="password2" placeholder="Confirm Password" required>
+    <button class="login-btn btn btn-primary" [disabled]="!registerForm.form.valid">Register</button>
     <p>Already have an account? <a routerLink="/login">Login</a></p>
   </form>
 </main>
