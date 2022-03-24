@@ -18,8 +18,8 @@ import { BookingComponent, ContactComponent,
          DashboardComponent, GalleryPanelComponent,
          MenuPanelComponent, SidenavComponent,
          AboutComponent, LoginComponent,
-         RegisterComponent} from './_components/component_collector';
-import { ProfileComponent } from './_components/account/profile/profile.component';
+         RegisterComponent, ProfileComponent,
+         UsersComponent } from './_components/component_collector';
    
          
 @NgModule({
@@ -38,7 +38,8 @@ import { ProfileComponent } from './_components/account/profile/profile.componen
     AboutComponent,
     LoginComponent,
     RegisterComponent,
-    ProfileComponent
+    ProfileComponent,
+    UsersComponent
   ],
   imports: [
     BrowserModule,

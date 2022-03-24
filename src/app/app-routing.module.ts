@@ -3,11 +3,10 @@ import { RouterModule, Routes } from '@angular/router';
 import { BookingComponent, HomeComponent, ContactComponent,
          GalleryComponent, MenuComponent, DashboardComponent,
          MenuPanelComponent, GalleryPanelComponent, AboutComponent,
-         LoginComponent, RegisterComponent, ProfileComponent}
+         LoginComponent, RegisterComponent, ProfileComponent, UsersComponent}
          from './_components/component_collector';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
   { path: 'about', component: AboutComponent },
   { path: 'menu', component: MenuComponent },
@@ -17,9 +16,18 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'profile', component: ProfileComponent },
-  { path: 'admin/dashboard', component: DashboardComponent },
-  { path: 'admin/menu-panel', component: MenuPanelComponent },
-  { path: 'admin/gallery-panel', component: GalleryPanelComponent }
+
+  { path: 'admin',
+    children: [
+      { path: 'dashboard', component: DashboardComponent },
+      { path: 'menu-panel', component: MenuPanelComponent },
+      { path: 'gallery-panel', component: GalleryPanelComponent },
+      { path: 'users', component: UsersComponent }
+    ]
+  },
+
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
+  { path: '**', component: HomeComponent }
 ];
 
 @NgModule({

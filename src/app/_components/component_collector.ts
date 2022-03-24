@@ -12,3 +12,4 @@ export { AboutComponent } from "./about/about.component";
 export { LoginComponent } from "./account/login/login.component"
 export { RegisterComponent } from "./account/register/register.component";
 export { ProfileComponent } from "./account/profile/profile.component";
+export { UsersComponent } from './admin/users/users.component';
