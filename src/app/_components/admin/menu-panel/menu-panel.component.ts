@@ -17,7 +17,6 @@ export class MenuPanelComponent implements OnInit {
   modalBtnSwap!: boolean;
   modalTitleSwap!: string;
 
-
   drinks: Menu[] = [];
   mainDishes: Menu[] = [];
   sushi: Menu[] = [];
@@ -36,6 +35,14 @@ export class MenuPanelComponent implements OnInit {
     this.getSushi();
     this.getDesserts();
     this.createProductForm();
+  }
+
+  // Product Form
+  createProductForm() {
+    this.productForm = this.fb.group({
+      name: ['', Validators.required],
+      price: ['', Validators.required]
+    });
   }
 
   //============
@@ -59,14 +66,6 @@ export class MenuPanelComponent implements OnInit {
   getDesserts(): void {
     this.menuService.getAllDeserts()
       .subscribe(data => this.desserts = data);
-  }
-
-  // Product Form
-  createProductForm() {
-    this.productForm = this.fb.group({
-      name: ['', Validators.required],
-      price: ['', Validators.required]
-    });
   }
 
   //=================
