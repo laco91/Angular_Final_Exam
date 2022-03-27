@@ -10,6 +10,9 @@ import { GalleryService } from 'src/app/_services/service_collector';
 })
 export class GalleryComponent implements OnInit {
 
+  focusImgSrc!: string;
+  focusImgAlt!: string;
+
   images: Gallery[] = [];
 
   constructor(public visibility: VisibilityService,
@@ -24,6 +27,11 @@ export class GalleryComponent implements OnInit {
   getImages() {
     this.galleryService.getAllImages()
       .subscribe(data => this.images = data);
+  }
+
+  focusThisImg(image: Gallery) {
+    this.focusImgSrc = `assets/imgs/gallery/${image.imgSrc}`;
+    this.focusImgAlt = image.imgAlt;
   }
 
 }
