@@ -99,11 +99,6 @@
       "id": 20,
       "name": "Drink name 20",
       "price": 10
-    },
-    {
-      "name": "Sake",
-      "price": "200",
-      "id": 22
     }
   ],
   "mainDishes": [
