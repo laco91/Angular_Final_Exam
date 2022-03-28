@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AuthGuard } from './_guards/auth.guard';
 import { BookingComponent, HomeComponent, ContactComponent,
          GalleryComponent, MenuComponent, DashboardComponent,
          MenuPanelComponent, GalleryPanelComponent, AboutComponent,
@@ -15,9 +16,9 @@ const routes: Routes = [
   { path: 'contact', component: ContactComponent },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
-  { path: 'profile', component: ProfileComponent },
+  { path: 'profile', component: ProfileComponent, canActivate: [AuthGuard] },
 
-  { path: 'admin',
+  { path: 'admin', canActivate: [AuthGuard],
     children: [
       { path: 'dashboard', component: DashboardComponent },
       { path: 'menu-panel', component: MenuPanelComponent },
