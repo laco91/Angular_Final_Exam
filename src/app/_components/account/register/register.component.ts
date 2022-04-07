@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { User } from 'src/app/_models/user';
+import { User } from 'src/app/_models/model_collector';
 import { UserService } from 'src/app/_services/service_collector';
 
 @Component({
@@ -11,6 +11,7 @@ import { UserService } from 'src/app/_services/service_collector';
 })
 export class RegisterComponent implements OnInit {
   
+  registerForm!: FormGroup;
   user!: User;
   users!: User[];
 
@@ -24,10 +25,23 @@ export class RegisterComponent implements OnInit {
   match: boolean = false;
 
   constructor(private userService: UserService,
-              private router: Router) { }
+              private router: Router,
+              private fb: FormBuilder) { }
 
   ngOnInit(): void {
     this.getUsers();
+    this.createRegisterForm();
+  }
+
+  // Register Form
+  createRegisterForm() {
+    this.registerForm = this.fb.group({
+      firstName: ['', Validators.required],
+      lastName: ['', Validators.required],
+      email: ['', Validators.required],
+      pw1: ['', Validators.required],
+      pw2: ['', Validators.required]
+    })
   }
 
   onRegister() {

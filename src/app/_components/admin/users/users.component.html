@@ -1,1 +1,61 @@
-<p>users works!</p>
+<main class="users-wrapper">
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Access</th>
+        <th scope="col">First Name</th>
+        <th scope="col">Last Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Password</th>
+        <th scope="col"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of users">
+        <th scope="row">{{ user.id }}</th>
+        <td>{{ user.access }}</td>
+        <td>{{ user.firstName }}</td>
+        <td>{{ user.lastName }}</td>
+        <td>{{ user.email }}</td>
+        <td>{{ user.password }}</td>
+        <td>
+          <div class="btn-group float-end">
+            <button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#userModal" (click)="prepareToEdit(user)">Edit</button>
+            <button class="btn btn-danger" (click)="deleteUser(user)">Delete</button>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="text-center">
+    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#userModal" (click)="prepareToAdd()">Add New User</button>
+  </div>
+  <!-- Modal -->
+  <div class="modal fade" id="userModal" tabindex="-1" aria-labelledby="userModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">{{ modalTitle }}</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form [formGroup]="userForm" class="d-grid gap-2">
+            <select name="access" formControlName="access">
+              <option value="user">User</option>
+              <option value="admin">Admin</option>
+            </select>
+            <input type="text" formControlName="firstName" placeholder="Frist Name">
+            <input type="text" formControlName="lastName" placeholder="Last Name">
+            <input type="text" formControlName="email" placeholder="Email">
+            <input type="text" formControlName="password" placeholder="Password">
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-success" [disabled]="!userForm.valid" data-bs-dismiss="modal"
+          (click)="addUser ? addNewUser() : editUser()">Save</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
